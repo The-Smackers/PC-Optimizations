@@ -1,0 +1,124 @@
+<h1>PC Optimization Guide</h1>
+
+<p>
+	<br>
+</p>
+
+<h2>Windows 11 Preparation</h2>
+
+<p>Nothing special/different in Windows 11 so same practices before still apply like below tips, A clean install is always better than updating to Windows 11</p>
+
+<p>Backup all your data always and enable System Restore and create a restore point after a fresh install or before completing this guide</p>
+
+<ul>
+	<li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
+	<li>Check in BIOS utility if XMP settings are (still) applied after update to Windows 11</li>
+	<li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">video&nbsp;</a>shows you how to check</li>
+</ul>
+
+<p>
+	<br>
+</p>
+
+<h2 id="isPasted">Windows 11 Checklist</h2>
+
+<ol>
+	<li>Install and update Windows 11</li>
+	<li id="isPasted">Make sure Game Mode is enabled</li>
+	<li>Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a></li>
+	<li>Power Options set to High Performance or <a href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html" target="_blank" rel="noopener noreferrer">Ultimate Performance</a>
+		<a href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html" data-fr-linked="true"></a></li>
+	<li>Check Nvidia control panel that global refresh rate and power is set to maximum/high performance</li>
+	<li>Open task manager and set start up apps to disabled unless actually want them starting with Windows</li>
+</ol>
+
+<p>
+	<br>
+</p>
+
+<h2 id="isPasted">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
+
+<h3>Display Driver Uninstaller Setup (to cleanup any currently installed drivers)</h3>
+
+<ul>
+	<li style="text-align: justify;">Download and install DDU and start the program</li>
+	<li style="text-align: justify;">Copy the Options like the image below and then click Close (If you want GeForce Experience uncheck the box)</li>
+</ul>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 634px;" src="blob:null/4abbb6d4-a3dc-460b-b0fc-004f4ec70a88"></p>
+
+<ul>
+	<li id="isPasted">Select your device type and choose NVIDIA or AMD GPU from the dropdown</li>
+	<li>Click Clean and restart</li>
+	<li>Your PC will restart after a couple of minutes be patient</li>
+</ul>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 635px;" src="blob:null/63abd696-7f74-4c59-a532-219d26646180"></p>
+
+<p>
+	<br>
+</p>
+
+<h2 id="isPasted">Clean Install of NVIDIA Driver using NVCleanstall</h2>
+
+<ul>
+	<li>Download, install and open <a href="https://www.techpowerup.com/download/techpowerup-nvcleanstall" target="_blank" rel="noopener noreferrer">NVCleanstall</a></li>
+	<li>Manually select a driver version and choose the latest 64 bit Desktop driver</li>
+	<li>Click Next and click Next again</li>
+	<li>Copy the settings like the two images below on the Installation Tweaks screen then click Next</li>
+	<li>Click Next and then click Install and wait for the installation to complete</li>
+</ul>
+
+<p style="display:inline-block;"><img class="fr-fic fr-dib fr-fil" style="width: 374px;" src="blob:null/fbef0f07-b46f-4e31-a093-6cef6c277392"><img class="fr-fic fr-dib" style="width: 374px;" src="blob:null/a8a5ae73-054d-4ee1-9a93-2eaf579a2f33"><img class="fr-fic fr-dib" style="width: 374px;" src="blob:null/2ac9f178-d06a-4839-93e9-7cf996cb2fb7"><img class="fr-fic fr-dib" style="width: 374px;" src="blob:null/9bb75f6e-5a76-4973-94af-049298179116"></p>
+
+<p style="display:inline-block;">
+	<br>
+</p>
+
+<h2>The below 3 things are needed only for running Faceit AC or Valorant AC</h2>
+
+<ol>
+	<li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get this warning: <a href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC" data-fr-linked="true">https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC</a></li>
+	<li>If it gives warning, <a href="https://www.youtube.com/watch?v=U5HQvy6p_XI" target="_blank" rel="noopener noreferrer">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
+	<li>If you have an updated BIOS and running/installing windows 11, the only thing I needed to do in my BIOS was turn CSM to disabled and make secure boot option set to Windows UEFI like the linked video at 5:26 as I have ASUS motherboard</li>
+	<li>Also that video doesn&#39;t show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" target="_blank" rel="noopener noreferrer">this video</a> shows you how to check</li>
+</ol>
+
+<h2>
+	<br>
+</h2>
+
+<h2>Counter-Strike 2 Optimizations and best settings</h2>
+
+<p>blah blah blah</p>
+
+<p>
+	<br>
+</p>
+
+<p>
+	<br>
+</p>
+
+<p>
+	<br>
+</p>
+
+<table style="width: 100%;">
+	<tbody>
+		<tr>
+			<td style="width: 25%;"></td>
+			<td style="width: 25%;"></td>
+			<td style="width: 25%;"></td>
+			<td style="width: 25%;"></td>
+		</tr>
+		<tr>
+			<td style="width: 25%;"></td>
+			<td style="width: 25%;"></td>
+			<td style="width: 25%;"></td>
+			<td style="width: 25%;"></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a title="Aenean sed hendrerit" href="http://google.com">Aenean sed hendrerit</a> velit. Nullam eu mi dolor. Maecenas et erat risus. Nulla ac auctor diam, non aliquet ante. Fusce ullamcorper, ipsum id tempor lacinia, sem tellus malesuada libero, quis ornare sem massa in orci. Sed dictum dictum tristique. Proin eros turpis, ultricies eu sapien eget, ornare rutrum ipsum. Pellentesque eros nisl, ornare nec ipsum sed, aliquet sollicitudin erat. Nulla tincidunt porta <strong>vehicula.</strong></p>
