@@ -40,7 +40,7 @@
 	<br>
 </p>
 
-<h2>Windows 11 Preparation</h2>
+<h2 id="win11prep">Windows 11 Preparation</h2>
 
 <p>Nothing special/different in Windows 11 so same practices before still apply like below tips, A clean install is always better than updating to Windows 11</p>
 
@@ -56,28 +56,27 @@
 	<br>
 </p>
 
-<h2 id="isPasted">Windows 11 Checklist</h2>
+<h2 id="check">Windows 11 Checklist</h2>
 
 <ol>
 	<li>Install and update Windows 11</li>
-	<li id="isPasted">Make sure Game Mode is enabled</li>
-	<li>Make sure <a rel="noopener noreferrer" href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11">hardware accelerated gpu scheduling and game optimizations is enabled</a></li>
-	<li>Power Options set to High Performance or <a rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a>
-		<a data-fr-linked="true" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html"></a></li>
-	<li>Check Nvidia control panel that global refresh rate and power is set to maximum/high performance</li>
-	<li>Open task manager and set start up apps to disabled unless actually want them starting with Windows</li>
+	<li id="isPasted">Now Make sure Game Mode is enabled</li>
+	<li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled<p><img class="fr-fic fr-dib fr-fil" style="width: 332px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 495px;" src="img/gpu2.png"></a></p></li>
+	<li>Now Check Nvidia control panel, click <strong>Manage 3d Settings</strong>, ensure that <strong>Preferred refresh rate</strong> is set to <strong>Highest available</strong> and <strong>Power management mode</strong> is set to <strong>Prefer maximum performance</strong> and click Apply</li>
+	<li>Now Click Windows Search Icon and type <strong>control panel</strong>, hit <strong>Enter</strong>, click <strong>Power Options</strong> if you&#39;re on a Desktop PC change power plan to either <strong>High Performance</strong> or <a id="isPasted" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a></li>
+	<li>Now Open Task Manager, click Startup apps and set all apps to disabled unless actually want them starting with Windows</li>
 </ol>
 
 <p>
 	<br>
 </p>
 
-<h2 id="isPasted">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
+<h2 id="drivers">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
 
 <h3>Display Driver Uninstaller Setup (to cleanup any currently installed drivers)</h3>
 
 <ul>
-	<li style="text-align: justify;">Download and install <a href="https://www.wagnardsoft.com/forums/viewtopic.php?t=4316" target="_blank" rel="noopener noreferrer">DDU </a>and start the program</li>
+	<li style="text-align: justify;">Download and install <a href="https://www.wagnardsoft.com/forums/viewtopic.php?t=4316" rel="noopener noreferrer">DDU&nbsp;</a>and start the program</li>
 	<li style="text-align: justify;">Copy the Options like the image below and then click Close (If you want GeForce Experience uncheck the box)</li>
 </ul>
 
@@ -95,7 +94,7 @@
 	<br>
 </p>
 
-<h2 id="isPasted">Clean Install of NVIDIA Driver using NVCleanstall</h2>
+<h2 id="NVCleanstall">Clean Install of NVIDIA Driver using NVCleanstall</h2>
 
 <ul>
 	<li>Download, install and open <a rel="noopener noreferrer" href="https://www.techpowerup.com/download/techpowerup-nvcleanstall">NVCleanstall</a></li>
@@ -111,7 +110,71 @@
 	<br>
 </p>
 
-<h2>The below 3 things are needed only for running Faceit AC or Valorant AC</h2>
+<h2 id="isPasted">Windows 10/11 Cleaning</h2>
+
+<p>1. Open Windows explorer (a folder) then highlight the text in address bar and delete it, then paste/type there:</p>
+
+<p><strong>C:\Windows\Temp</strong></p>
+
+<p>and hit <strong>Enter</strong><strong><p><img src="img/folder.png" style="width: 929px;" class="fr-fic fr-dib fr-fil"></p></strong>Click okay if asked for Admin privileges</p>
+
+<p>Select all files in the folder by pressing CTRL+A on your keyboard after selecting a random file</p>
+
+<p>Press your <strong>Delete&nbsp;</strong>key</p>
+
+<p>Do this for all current items box and click Skip</p>
+
+<p>Some items may not delete, this is fine, move on</p>
+
+<p>
+	<br>
+</p>
+
+<p id="isPasted">2. Open Windows explorer (a folder) again then highlight the text in address bar and delete it, then paste/type there:</p>
+
+<p><strong>%temp%</strong></p>
+
+<p>and hit <strong id="isPasted">Enter</strong></p>
+
+<p>Select all the files in the folder by pressing CTRL+A on your keyboard after selecting a random file</p>
+
+<p>Press your <strong>Delete&nbsp;</strong>key</p>
+
+<p>Tick the Do this for all current items box and click Skip</p>
+
+<p>Some items may not delete, this is fine, move on</p>
+
+<p>
+	<br>
+</p>
+
+<p>3. Disk cleanup</p>
+
+<p>Click the search icon on task bar and type <strong>cleanmgr&nbsp;</strong>and hit <strong>Enter</strong></p>
+
+<p>Select C drive and press <strong>OK</strong></p>
+
+<p>Tick every box and press <strong>OK&nbsp;</strong>and then click Delete Files (Warning: this will delete your image and video thumbnails and anything in your Recycle Bin)</p>
+
+<p><img src="img/clean1.png" style="width: 481px;" class="fr-fic fr-dib fr-fil"></p>
+
+<p>4. Clean up system files</p>
+
+<p>Click the search icon on task bar and type <strong id="isPasted">cleanmgr&nbsp;</strong>and hit <strong>Enter</strong></p>
+
+<p>Click Clean up system files</p>
+
+<p>Choose what you want to clean, most people do everything</p>
+
+<p>Click OK this process might take a bit longer, be patient</p>
+
+<p><img src="img/clean2.png" style="width: 480px;" class="fr-fic fr-dib fr-fil"></p>
+
+<p>
+	<br>
+</p>
+
+<h2 id="secureboot">The below 3 things are needed only for running Faceit AC or Valorant AC</h2>
 
 <ol>
 	<li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get this warning: <a data-fr-linked="true" href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC">https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC</a></li>
@@ -124,12 +187,104 @@
 	<br>
 </h2>
 
-<h2>Counter-Strike 2 Optimizations and best settings</h2>
+<h2 id="rbar">Enable Resizable BAR for NVIDIA 2000/3000/4000 Series GPU</h2>
+
+<h3 id="isPasted">If your system has these components or anything newer rBAR should be supported (google your cpu, motherboard and gpu to see if supported)</h3>
+
+<ul style="list-style-type: square;">
+	<li>Intel CPU: 10th, 11th, 12th, 13th series and newer</li>
+	<li>AMD CPU: AMD Motherboard: 300 series(bios update), 400, 500, 600 series and newer</li>
+	<li>NVIDIA RTX 3000 series or newer</li>
+	<li>AMD Radeon RX 5000 series or newer with unofficial patch: RX 500 series/Vega56,64/Radeon VII</li>
+</ul>
+
+<p>You should have a relatively up to date BIOS, back up your data as per usual</p>
+
+<h3 id="what">What is Resizable BAR?</h3>
+
+<p>All gaming PCs produce an on-screen image by way of the CPU processing data, textures, shaders and the like, from the graphics card&rsquo;s frame buffer. Usually the CPU can only access this buffer in 256MB read blocks, which obviously isn&rsquo;t very much when modern GPUs regularly have 8GB of video memory or much, much more.</p>
+
+<p>Resizable BAR essentially makes the entirety of the graphics frame buffer accessible to the CPU at once; where it could once sip, it now guzzles. The idea is that once textures, shaders and geometry are loading in faster, games should run faster with higher frame rates.</p>
+
+<p><a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=5DqcgHtkm9I">This video</a> explains everything if you wish to learn more.</p>
+
+<h3 id="check">Confirm Resize BAR state with NVIDIA Control Panel</h3>
+
+<p>1. Right click of mouse and select [NVIDIA Control Panel]</p>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 232px;" src="img/nv1.bmp"></p>
+
+<p>2. Click [Help] option and then click [System Information] option</p>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 691px;" src="img/nv2.bmp"></p>
+
+<p>3. Resizable BAR show Yes means enabled</p>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 678px;" src="img/nv3.bmp"></p>
+
+<p>
+	<br>
+</p>
+
+<p>If it does not say Yes you must enable it in the BIOS.</p>
+
+<h3 id="enable">Enabled Resize BAR in BIOS setup</h3>
+
+<p>(For example：TUF GAMING X570-PLUS(WI-FI))</p>
+
+<p>1. Power on the system and press &lt;delete&gt; key to enter BIOS [EZ Mode]</p>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 978px;" src="img/bios1.bmp"></p>
+
+<p>2. Click Resize BAR icon and set to [On]</p>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 975px;" src="img/bios2.bmp"></p>
+
+<p>3. Press &lt;F10&gt; key and click &lt;OK&gt; , the system will auto reboot</p>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 970px;" src="img/bios3.bmp"></p>
+
+<p>4. Go back to step <a href="#check">Confirm Resize BAR state with NVIDIA Control Panel</a> and confirm it&#39;s set to Yes</p>
+
+<h3>You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
+
+<ul>
+	<li id="isPasted">Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
+	<li>Open nvidiaProfileInspector and scroll down to section <strong>5 - Common</strong> and change the 3 rBAR options like the image below</li>
+</ul>
+
+<p><img class="fr-fic fr-dib fr-fil" style="width: 1208px;" src="img/7.png"></p>
+
+<ul>
+	<li>Then click Apply Changes top right</li>
+	<li>This profile that&#39;s saved is the Global Profile, if you wish to disable rBAR you can do it on a per game basis by clicking on the Profiles drop down at top left</li>
+</ul>
+
+<p>
+	<br>
+</p>
+
+<h2 id="isPasted">Enable Resizable BAR for AMD Series GPU</h2>
+
+<ul>
+	<li id="isPasted">blah</li>
+	<li>blah</li>
+	<li>blah</li>
+</ul>
+
+<p>
+	<br>
+</p>
+
+<h2 id="cs2">Counter-Strike 2 Optimizations and best settings</h2>
 
 <ul>
 	<li>blah</li>
 	<li>blah</li>
 	<li>blah</li>
+	<li>
+		<br>
+	</li>
 </ul>
 
 
