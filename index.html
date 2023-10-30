@@ -1,4 +1,40 @@
-<h1>PC Optimization Guide</h1>
+<!-- Filename:index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>
+          PC and CS2 Optimizations
+      </title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: black;
+            color: white;
+            font-size: 25px;
+        }
+ 
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+ 
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+ 
+<body>
+
+<p>PC and CS2 Optimizations</p>
+
+<h1>PC and Counter-Strike 2 Optimization Guide</h1>
 
 <p>
 	<br>
@@ -13,7 +49,7 @@
 <ul>
 	<li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
 	<li>Check in BIOS utility if XMP settings are (still) applied after update to Windows 11</li>
-	<li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">video&nbsp;</a>shows you how to check</li>
+	<li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" rel="noopener noreferrer">video&nbsp;</a>shows you how to check</li>
 </ul>
 
 <p>
@@ -25,9 +61,9 @@
 <ol>
 	<li>Install and update Windows 11</li>
 	<li id="isPasted">Make sure Game Mode is enabled</li>
-	<li>Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a></li>
-	<li>Power Options set to High Performance or <a href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html" target="_blank" rel="noopener noreferrer">Ultimate Performance</a>
-		<a href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html" data-fr-linked="true"></a></li>
+	<li>Make sure <a rel="noopener noreferrer" href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11">hardware accelerated gpu scheduling and game optimizations is enabled</a></li>
+	<li>Power Options set to High Performance or <a rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a>
+		<a data-fr-linked="true" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html"></a></li>
 	<li>Check Nvidia control panel that global refresh rate and power is set to maximum/high performance</li>
 	<li>Open task manager and set start up apps to disabled unless actually want them starting with Windows</li>
 </ol>
@@ -41,11 +77,11 @@
 <h3>Display Driver Uninstaller Setup (to cleanup any currently installed drivers)</h3>
 
 <ul>
-	<li style="text-align: justify;">Download and install DDU and start the program</li>
+	<li style="text-align: justify;">Download and install <a href="https://www.wagnardsoft.com/forums/viewtopic.php?t=4316" target="_blank" rel="noopener noreferrer">DDU </a>and start the program</li>
 	<li style="text-align: justify;">Copy the Options like the image below and then click Close (If you want GeForce Experience uncheck the box)</li>
 </ul>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 634px;" src="img/2.png"></p>
+<p><img src="img/2.png" style="width: 634px;" class="fr-fic fr-dib fr-fil"></p>
 
 <ul>
 	<li id="isPasted">Select your device type and choose NVIDIA or AMD GPU from the dropdown</li>
@@ -53,7 +89,7 @@
 	<li>Your PC will restart after a couple of minutes be patient</li>
 </ul>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 635px;" src="img/1.png"></p>
+<p><img src="img/1.png" style="width: 635px;" class="fr-fic fr-dib fr-fil"></p>
 
 <p>
 	<br>
@@ -62,14 +98,14 @@
 <h2 id="isPasted">Clean Install of NVIDIA Driver using NVCleanstall</h2>
 
 <ul>
-	<li>Download, install and open <a href="https://www.techpowerup.com/download/techpowerup-nvcleanstall" target="_blank" rel="noopener noreferrer">NVCleanstall</a></li>
+	<li>Download, install and open <a rel="noopener noreferrer" href="https://www.techpowerup.com/download/techpowerup-nvcleanstall">NVCleanstall</a></li>
 	<li>Manually select a driver version and choose the latest 64 bit Desktop driver</li>
 	<li>Click Next and click Next again</li>
 	<li>Copy the settings like the two images below on the Installation Tweaks screen then click Next</li>
 	<li>Click Next and then click Install and wait for the installation to complete</li>
 </ul>
 
-<p style="display:inline-block;"><img class="fr-fic fr-dib fr-fil" style="width: 374px;" src="img/3.png"><img class="fr-fic fr-dib" style="width: 374px;" src="img/5.png"><img class="fr-fic fr-dib" style="width: 374px;" src="img/4.png"><img class="fr-fic fr-dib" style="width: 374px;" src="img/6.png"></p>
+<p style="display:inline-block;"><img src="img/3.png" style="width: 374px;" class="fr-fic fr-dib fr-fil"><img src="img/5.png" style="width: 374px;" class="fr-fic fr-dib"><img src="img/4.png" style="width: 374px;" class="fr-fic fr-dib"><img src="img/6.png" style="width: 374px;" class="fr-fic fr-dib"></p>
 
 <p style="display:inline-block;">
 	<br>
@@ -78,10 +114,10 @@
 <h2>The below 3 things are needed only for running Faceit AC or Valorant AC</h2>
 
 <ol>
-	<li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get this warning: <a href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC" data-fr-linked="true">https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC</a></li>
-	<li>If it gives warning, <a href="https://www.youtube.com/watch?v=U5HQvy6p_XI" target="_blank" rel="noopener noreferrer">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
+	<li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get this warning: <a data-fr-linked="true" href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC">https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC</a></li>
+	<li>If it gives warning, <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=U5HQvy6p_XI">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
 	<li>If you have an updated BIOS and running/installing windows 11, the only thing I needed to do in my BIOS was turn CSM to disabled and make secure boot option set to Windows UEFI like the linked video at 5:26 as I have ASUS motherboard</li>
-	<li>Also that video doesn&#39;t show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" target="_blank" rel="noopener noreferrer">this video</a> shows you how to check</li>
+	<li>Also that video doesn&#39;t show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">this video</a> shows you how to check</li>
 </ol>
 
 <h2>
@@ -90,35 +126,29 @@
 
 <h2>Counter-Strike 2 Optimizations and best settings</h2>
 
-<p>blah blah blah</p>
+<ul>
+	<li>blah</li>
+	<li>blah</li>
+	<li>blah</li>
+</ul>
 
-<p>
-	<br>
-</p>
 
-<p>
-	<br>
-</p>
-
-<p>
-	<br>
-</p>
-
-<table style="width: 100%;">
-	<tbody>
-		<tr>
-			<td style="width: 25%;"></td>
-			<td style="width: 25%;"></td>
-			<td style="width: 25%;"></td>
-			<td style="width: 25%;"></td>
-		</tr>
-		<tr>
-			<td style="width: 25%;"></td>
-			<td style="width: 25%;"></td>
-			<td style="width: 25%;"></td>
-			<td style="width: 25%;"></td>
-		</tr>
-	</tbody>
-</table>
-
-<p><a title="Aenean sed hendrerit" href="http://google.com">Aenean sed hendrerit</a> velit. Nullam eu mi dolor. Maecenas et erat risus. Nulla ac auctor diam, non aliquet ante. Fusce ullamcorper, ipsum id tempor lacinia, sem tellus malesuada libero, quis ornare sem massa in orci. Sed dictum dictum tristique. Proin eros turpis, ultricies eu sapien eget, ornare rutrum ipsum. Pellentesque eros nisl, ornare nec ipsum sed, aliquet sollicitudin erat. Nulla tincidunt porta <strong>vehicula.</strong></p>
+    <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+    <script>
+        function darkMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+            content.innerText = "Dark Mode is ON";
+        }
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "Dark Mode is OFF";
+        }
+    </script>
+</body>
+</html>
