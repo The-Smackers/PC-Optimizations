@@ -13,8 +13,8 @@
     <style>
         body {
             padding: 25px;
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
             font-size: 25px;
         }
  
@@ -34,12 +34,12 @@
 
 <h1>PC and Counter-Strike 2 Optimization Guide</h1>
 
+    <h3 id="DarkModetext">Dark Mode for this page is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+	
 <h4>This guide is created and assembled by The Smackers for playing Counter-Strike 2, follow this guide at your own risk.<p>
 </p>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</h4>
-
-<p>
-	<br>
-</p>
 
 <h2 id="win11prep">Windows 11 Preparation</h2>
 
@@ -288,22 +288,18 @@
 	</li>
 </ul>
 
-
-    <h3 id="DarkModetext">Dark Mode is OFF</h3>
-    <button onclick="darkMode()">Darkmode</button>
-    <button onclick="lightMode()">LightMode</button>
     <script>
         function darkMode() {
             let element = document.body;
             let content = document.getElementById("DarkModetext");
             element.className = "dark-mode";
-            content.innerText = "Dark Mode is ON";
+            content.innerText = "Dark Mode for this page is ON";
         }
         function lightMode() {
             let element = document.body;
             let content = document.getElementById("DarkModetext");
             element.className = "light-mode";
-            content.innerText = "Dark Mode is OFF";
+            content.innerText = "Dark Mode for this page is OFF";
         }
     </script>
 </body>
