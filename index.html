@@ -10,38 +10,199 @@
     <title>
           PC and CS2 Optimizations
       </title>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             padding: 25px;
-            background-color: white;
-            color: black;
-            font-size: 25px;
+            background-color: #202020;
+            color: white;
+            font-size: 20px;
+			
         }
- 
+		title {
+			background-color: #2b2b2b;
+            color: white;
+		}
+		h1 {
+			font-size: 40px;
+		}
+		h2 {
+			font-size: 30px;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 20px;
+		}
+		a:link {
+			color: #9966cc;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:visited {
+			color: #9966cc;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #9966cc;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+		a:active {
+			color: yellow;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+		.footer{
+			padding:30px 0px;
+			font-family: 'Play', sans-serif;
+			text-align:center;
+		}
+		.footer .row{
+			width:100%;
+			margin:1% 0%;
+			padding:0.6% 0%;
+			color:gray;
+			font-size:0.8em;
+		}
+		.footer .row a{
+			text-decoration:none;
+			color:gray;
+			transition:0.5s;
+		}
+		.footer .row a:hover{
+
+		}
+		.footer .row ul{
+			width:100%;
+		}
+
+		.footer .row ul li{
+			display:inline-block;
+			margin:0px 30px;
+		}
+		.footer .row a i{
+			font-size:2em;
+			margin:0% 1%;
+		}
+		@media (max-width:720px){
+			.footer{
+			text-align:left;
+			padding:5%;
+		}
+		.footer .row ul li{
+			display:block;
+			margin:10px 0px;
+			text-align:left;
+		}
+		.footer .row a i{
+			margin:0% 3%;
+			}
+		}
         .dark-mode {
-            background-color: black;
+            background-color: #202020;
             color: white;
         }
- 
         .light-mode {
             background-color: white;
-            color: black;
+            color: #202020;
         }
+		/* The side navigation menu */
+		.sidebar {
+			margin: 0;
+			padding: 0;
+			width: 200px;
+			background-color: #f0f0f0;
+			position: fixed;
+			height: 100%;
+			overflow: auto;
+		}
+
+		/* Sidebar links */
+		.sidebar a {
+			display: block;
+			color: black;
+			padding: 16px;
+			text-decoration: none;
+		}
+
+		/* Active/current link */
+			.sidebar a.active {
+			background-color: #9966cc;
+			color: white;
+		}
+
+		/* Links on mouse-over */
+			.sidebar a:hover:not(.active) {
+			background-color: #555;
+			color: white;
+		}
+
+		/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+		div.content {
+			margin-left: 200px;
+			padding: 1px 16px;
+			height: 1000px;
+		}
+
+		/* On screens that are less than 700px wide, make the sidebar into a topbar */
+		@media screen and (max-width: 700px) {
+		.sidebar {
+			width: 100%;
+			height: auto;
+			position: relative;
+		}
+		.sidebar a {float: left;}
+			div.content {margin-left: 0;}
+		}
+
+		/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+		@media screen and (max-width: 400px) {
+			.sidebar a {
+			text-align: center;
+			float: none;
+		}
+		}
     </style>
 </head>
  
 <body>
 
-<h1>PC and Counter-Strike 2 Optimization Guide</h1>
+<!-- The sidebar -->
+<div class="sidebar">
+  <a class="active" href="#home">Home</a>
+  <a href="#prep">Windows 11 Preperation</a>
+  <a href="#check">Windows 11 Checklist</a>
+  <a href="#clean">Clean GPU Drivers</a>
+  <a href="#nvidia">Install NVIDIA GPU Drivers</a>
+  <a href="#amd">Install AMD GPU Drivers</a>
+  <a href="#tempfiles">Windows Cleaning</a>
+  <a href="#faceit">Windows 11 and Faceit AC</a>
+  <a href="#stutter">Fix Game Stutter</a>
+  <a href="#rbar">What is Resizable BAR</a>
+  <a href="#rbarcheck">Check Resizable BAR Enabeled</a>
+  <a href="#rbarbios">Enable Resizable BAR in BIOS</a>
+  <a href="#rbarnv">Enable Resizable BAR for NVIDIA</a>
+  <a href="#rbaramd">Enable Resizable BAR for AMD</a>
+  <a href="#cs2">Counter-Strike 2 Optimizations</a>
+</div>
 
-    <h3 id="DarkModetext">Dark Mode for this page is OFF</h3>
+<div class="content">
+<h1 id="home">PC and Counter-Strike 2 Optimization Guide</h1>
+
+    <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
     <button onclick="darkMode()">Darkmode</button>
     <button onclick="lightMode()">LightMode</button>
 	
-<h4>This guide is created and assembled by The Smackers for playing Counter-Strike 2, follow this guide at your own risk.<p>
-</p>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</h4>
+<p>This guide is created and assembled by The Smackers for playing Counter-Strike 2, follow this guide at your own risk.</p>
+<p>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</p>
 
-<h2 id="win11prep">Windows 11 Preparation</h2>
+<h2 id="prep">Windows 11 Preparation</h2>
 
 <p>Nothing special/different in Windows 11 so same practices before still apply like the below tips, A clean install is always better than updating to Windows 11</p>
 
@@ -50,7 +211,7 @@
 <ul>
 	<li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
 	<li>Check in BIOS utility if XMP settings are (still) applied after update to Windows 11</li>
-	<li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" rel="noopener noreferrer">video&nbsp;</a>shows you how to check</li>
+	<li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" target="_blank" rel="noopener noreferrer">video&nbsp;</a>shows you how to check</li>
 </ul>
 
 <p>
@@ -62,9 +223,9 @@
 <ol>
 	<li>Install and update Windows 11</li>
 	<li id="isPasted">Now Make sure Game Mode is enabled</li>
-	<li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled<p><img class="fr-fic fr-dib fr-fil" style="width: 332px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 495px;" src="img/gpu2.png"></a></p></li>
+	<li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled<p><img class="fr-fic fr-dib fr-fil" style="width: 332px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 495px;" src="img/gpu2.png"></a></p></li>
 	<li>Now Check Nvidia control panel, click <strong>Manage 3d Settings</strong>, ensure that <strong>Preferred refresh rate</strong> is set to <strong>Highest available</strong> and <strong>Power management mode</strong> is set to <strong>Prefer maximum performance</strong> and click Apply</li>
-	<li>Now Click Windows Search Icon and type <strong>control panel</strong>, hit <strong>Enter</strong>, click <strong>Power Options</strong> if you&#39;re on a Desktop PC change power plan to either <strong>High Performance</strong> or <a id="isPasted" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a></li>
+	<li>Now Click Windows Search Icon and type <strong>control panel</strong>, hit <strong>Enter</strong>, click <strong>Power Options</strong> if you&#39;re on a Desktop PC change power plan to either <strong>High Performance</strong> or <a target="_blank" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a></li>
 	<li>Now Open Task Manager, click Startup apps and set all apps to disabled unless actually want them starting with Windows</li>
 </ol>
 
@@ -72,12 +233,12 @@
 	<br>
 </p>
 
-<h2 id="drivers">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
+<h2 id="clean">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
 
 <h3>Display Driver Uninstaller Setup (to cleanup any currently installed drivers)</h3>
 
 <ul>
-	<li style="text-align: justify;">Download and install <a href="https://www.wagnardsoft.com/forums/viewtopic.php?t=4316" rel="noopener noreferrer">DDU&nbsp;</a>and start the program</li>
+	<li style="text-align: justify;">Download and install <a href="https://www.wagnardsoft.com/forums/viewtopic.php?t=4316" target="_blank" rel="noopener noreferrer">DDU&nbsp;</a>and start the program</li>
 	<li style="text-align: justify;">Copy the Options like the image below and then click Close</li>
 </ul>
 
@@ -95,10 +256,10 @@
 	<br>
 </p>
 
-<h2 id="NVCleanstall">Clean Install of NVIDIA Driver using NVCleanstall</h2>
+<h2 id="nvidia">Clean Install of NVIDIA Driver using NVCleanstall</h2>
 
 <ul>
-	<li>Download, install and open <a rel="noopener noreferrer" href="https://www.techpowerup.com/download/techpowerup-nvcleanstall">NVCleanstall</a></li>
+	<li>Download, install and open <a rel="noopener noreferrer" target="_blank" href="https://www.techpowerup.com/download/techpowerup-nvcleanstall">NVCleanstall</a></li>
 	<li>Manually select a driver version and choose the latest 64 bit Desktop driver</li>
 	<li>Click Next and click Next again</li>
 	<li>Copy the settings like the images below on the Installation Tweaks screen then click Next (If you want GeForce Experience or ShadowPlay check those boxes)</li>
@@ -111,7 +272,7 @@
 	<br>
 </p>
 
-<h2 id="AMD">Install AMD Driver</h2>
+<h2 id="amd">Install AMD Driver</h2>
 
 <ul>
 	<li>blah</li>
@@ -122,7 +283,7 @@
 	<br>
 </p>
 
-<h2 id="isPasted">Windows 10/11 Cleaning</h2>
+<h2 id="tempfiles">Windows 10/11 Cleaning</h2>
 
 <p>1. Open Windows explorer (a folder) then highlight the text in address bar and delete it, then paste/type there:</p>
 
@@ -186,20 +347,20 @@
 	<br>
 </p>
 
-<h2 id="secureboot">The below 3 things are needed only for running Faceit AC or Valorant AC in Windows 11</h2>
+<h2 id="faceit">These things are needed for running Faceit AC or Valorant AC in Windows 11</h2>
 
 <ol>
-	<li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get this warning: <a data-fr-linked="true" href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC">https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC</a></li>
-	<li>If it gives warning, <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=U5HQvy6p_XI">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
+	<li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get <a target="_blank" data-fr-linked="true" href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC">this warning</a></li>
+	<li>If it gives warning, <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=U5HQvy6p_XI">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
 	<li>If you have an updated BIOS and running/installing windows 11, the only thing I needed to do in my BIOS was turn CSM to disabled and make secure boot option set to Windows UEFI like the linked video at 5:26 as I have ASUS motherboard</li>
-	<li>Also that video doesn&#39;t show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">this video</a> shows you how to check</li>
+	<li>Also that video doesn't show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">this video</a> shows you how to check</li>
 </ol>
 
 <h2>
 	<br>
 </h2>
 	
-<h2 id="easyfix">Easy Fix for PC Stuttering in games (GameBar Presence Writer)</h2>
+<h2 id="stutter">Easy Fix for PC Stuttering in games (GameBar Presence Writer)</h2>
 
 <ul>
 	<li>Start the game you wish to play and then open the <strong>Task Manager</strong> and locate the process <strong>Gamebar Presence Writer</strong></li>
@@ -223,15 +384,15 @@
 
 <p>You should have a relatively up to date BIOS, back up your data as per usual</p>
 
-<h3 id="what">What is Resizable BAR?</h3>
+<h3 id="rbar">What is Resizable BAR?</h3>
 
 <p>All gaming PCs produce an on-screen image by way of the CPU processing data, textures, shaders and the like, from the graphics card&rsquo;s frame buffer. Usually the CPU can only access this buffer in 256MB read blocks, which obviously isn&rsquo;t very much when modern GPUs regularly have 8GB of video memory or much, much more.</p>
 
 <p>Resizable BAR essentially makes the entirety of the graphics frame buffer accessible to the CPU at once; where it could once sip, it now guzzles. The idea is that once textures, shaders and geometry are loading in faster, games should run faster with higher frame rates.</p>
 
-<p><a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=5DqcgHtkm9I">This video</a> explains everything if you wish to learn more.</p>
+<p><a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=5DqcgHtkm9I">This video</a> explains everything if you wish to learn more.</p>
 
-<h3 id="check">Confirm Resize BAR state with NVIDIA Control Panel</h3>
+<h3 id="rbarcheck">Confirm Resize BAR state with NVIDIA Control Panel</h3>
 
 <p>1. Right click of mouse and select [NVIDIA Control Panel]</p>
 
@@ -251,7 +412,7 @@
 
 <p>If it does not say Yes you must enable it in the BIOS.</p>
 
-<h3 id="enable">Enabled Resize BAR in BIOS setup</h3>
+<h3 id="rbarbios">Enabled Resize BAR in BIOS setup</h3>
 
 <p>(For example：TUF GAMING X570-PLUS(WI-FI))</p>
 
@@ -269,10 +430,10 @@
 
 <p>4. Go back to step <a href="#check">Confirm Resize BAR state with NVIDIA Control Panel</a> and confirm it&#39;s set to Yes</p>
 
-<h3>You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
+<h3 id="rbarnv">You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
 
 <ul>
-	<li id="isPasted">Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
+	<li id="isPasted">Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" target="_blank" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
 	<li>Open nvidiaProfileInspector and scroll down to section <strong>5 - Common</strong> and change the 3 rBAR options like the image below</li>
 </ul>
 
@@ -287,7 +448,7 @@
 	<br>
 </p>
 
-<h2 id="isPasted">Enable Resizable BAR for AMD Series GPU</h2>
+<h2 id="rbaramd">Enable Resizable BAR for AMD Series GPU</h2>
 
 <ul>
 	<li id="isPasted">blah</li>
@@ -309,6 +470,33 @@
 		<br>
 	</li>
 </ul>
+
+<footer>
+<div class="footer">
+	<div class="row">
+	<a href="#"><i class="fa fa-facebook"></i></a>
+	<a href="#"><i class="fa fa-instagram"></i></a>
+	<a href="#"><i class="fa fa-youtube"></i></a>
+	<a href="#"><i class="fa fa-twitter"></i></a>
+	</div>
+
+	<div class="row">
+	<ul>
+	<li><a href="#">Contact us</a></li>
+	<li><a href="#">Discord</a></li>
+	<li><a href="#">Steam Group</a></li>
+	<li><a href="#">Leetify Stats</a></li>
+	<li><a href="#">Application</a></li>
+	</ul>
+	</div>
+
+	<div class="row">
+	The Smackers © 2023 
+	</div>
+	</div>
+</footer>
+
+</div>
 
     <script>
         function darkMode() {
