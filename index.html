@@ -14,7 +14,6 @@
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            padding: 25px;
             background-color: #202020;
             color: white;
             font-size: 20px;
@@ -23,6 +22,15 @@
 		title {
 			background-color: #2b2b2b;
             color: white;
+		}
+		.banner {
+		padding: -20px;
+			background-image: url(img/logo.png);
+			height: 548px;
+			/* Create the parallax scrolling effect */
+			/* Prevent image from repeating */
+			background-repeat: no-repeat;
+			color: black;
 		}
 		h1 {
 			font-size: 40px;
@@ -117,6 +125,7 @@
 		.sidebar {
 			font-size: 18px;
 			margin: 0;
+			margin-top: 26px;
 			padding: 0;
 			width: 230px;
 			background-color: #f0f0f0;
@@ -190,6 +199,7 @@
 <body>
 
 <!-- The sidebar -->
+
 <div class="sidebar">
   <a class="active" href="#home">Home</a>
   <a href="#prep">Windows 11 Preparation</a>
@@ -213,8 +223,17 @@
   <p><br></p>
 </div>
 
+
+
 <div class="content">
-<h1 id="home">PC and Counter-Strike 2 Optimization Guide</h1>
+<!-- The banner logo -->
+<div class="banner">
+  <div>
+    <h1>PC and Counter-Strike 2 Optimization Guide</h1>
+    <h5>Get more frames today!</h5>
+  </div>  
+</div>
+
 
     <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
     <button onclick="darkMode()">Darkmode</button>
