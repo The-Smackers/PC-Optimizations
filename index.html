@@ -190,7 +190,8 @@
   <a href="#rbarnv">Enable Resizable BAR for NVIDIA</a>
   <a href="#rbaramd">Enable Resizable BAR for AMD</a>
   <a href="#cs2">Counter-Strike 2 Optimizations</a>
-    <a href="#cs2cfg">Counter-Strike 2 autoexec file</a>
+  <a href="#autoexec">Counter-Strike 2 autoexec file</a>
+  <a href="#desubtick">Counter-Strike 2 desubticked binds</a>
 </div>
 
 <div class="content">
@@ -224,7 +225,7 @@
 <ol>
 	<li>Install and update Windows 11</li>
 	<li id="isPasted">Now Make sure Game Mode is enabled</li>
-	<li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled<p><img class="fr-fic fr-dib fr-fil" style="width: 332px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 495px;" src="img/gpu2.png"></a></p></li>
+	<li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a><p><img class="fr-fic fr-dib fr-fil" style="width: 332px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 495px;" src="img/gpu2.png"></p></li>
 	<li>Now Check Nvidia control panel, click <strong>Manage 3d Settings</strong>, ensure that <strong>Preferred refresh rate</strong> is set to <strong>Highest available</strong> and <strong>Power management mode</strong> is set to <strong>Prefer maximum performance</strong> and click Apply</li>
 	<li>Now Click Windows Search Icon and type <strong>control panel</strong>, hit <strong>Enter</strong>, click <strong>Power Options</strong> if you&#39;re on a Desktop PC change power plan to either <strong>High Performance</strong> or <a target="_blank" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a></li>
 	<li>Now Open Task Manager, click Startup apps and set all apps to disabled unless actually want them starting with Windows</li>
@@ -476,17 +477,80 @@
 	<br>
 </p>
 
-<h2 id="cs2cfg">Creating a Counter-Strike 2 autoexec.cfg file</h2>
+	<h2 id="autoexec">Creating a Counter-Strike 2 autoexec.cfg file</h2>
 
-<ul>
-	<li>blah</li>
-	<li>blah</li>
-	<li>blah</li>
-	<li>
+	<p>In Windows search bar type: <strong>folder options</strong> and then hit <strong>Enter</strong>, click the View tab and then uncheck <strong>Hide extensions for known file types</strong>, click Apply and OK</p>
+
+	<p><img src="img/folder1.png" style="width: 1015px;" class="fr-fic fr-dib fr-fil"></p>
+
+	<p>Now open Windows explorer (a folder) and browse to: <strong>C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg</strong></p>
+
+	<p>Right click and empty space in the folder and create a New -&gt; Text Document, rename it to <strong>autoexec.cfg</strong></p>
+
+	<p>Now open it with Notepad and put these lines: (this basically creates an empty config to which you may add anything you wish later)</p><pre>// start
+con_enable 1
+
+// end
+host_writeconfig
+</pre>
+
+<p>
+	<br>
+</p>
+
+	<h2 id="desubtick">Add Counter-Strike 2 desubticked binds for autoexec.cfg file</h2>
+
+
+<p>Desubticked movement binds make movement feel more consistent and more like CS:GO, <a rel="noopener noreferrer" target="_blank" href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/">This link from Reddit</a> is where the desubtick binds come from</p>
+	<p>Open your autoexec.cfg file with Notepad and put these lines anywhere above the line that says end on it <br>
+	and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><pre>// default movement binds
+
+// bind w +forward
+// bind a +left
+// bind d +right
+// bind s +back
+// bind CTRL +duck
+// bind MWHEELDOWN +jump
+// bind SPACE +jump
+
+// de-subticked movement binds
+
+bind w +forward_
+bind a +left_
+bind s +back_
+bind d +right_
+alias +forward_ +forward;+forward
+alias -forward_ -forward;-forward;-forward
+alias +left_ +left;+left
+alias -left_ -left;-left;-left
+alias +back_ +back;+back
+alias -back_ -back;-back;-back
+alias +right_ +right;+right
+alias -right_ -right;-right;-right
+
+// de-subticked crouch binds
+
+bind CTRL +duck_
+alias +duck_ +duck;+duck
+alias -duck_ -duck;-duck;-duck
+
+// de-subticked jump binds
+
+bind MWHEELDOWN jomp
+
+alias +jump_ +jump;+jump
+alias -jump_ -jump;-jump;-jump
+alias jomp +jump_;-jump_
+
+// jump throw grenades
+bind SPACE +ju; +ja; +jum
+alias +ju +jump
+alias +ja -attack; -attack2
+alias +jum -jump</pre>
+
+	<p>
 		<br>
-	</li>
-</ul>
-
+	</p>
 <footer>
 <div class="footer">
 	<div class="row">
