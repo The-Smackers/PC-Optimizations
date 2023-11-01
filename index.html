@@ -169,6 +169,20 @@
 			float: none;
 		}
 		}
+		code{
+			color: whitesmoke;
+			background-color: black;  
+		}
+
+		pre{
+			color: whitesmoke;
+			background-color: black;
+			scrollbar-color: dark;
+			width: 100%;
+			max-height: 1200px;
+			display: inline-block;
+			overflow: auto;  
+		}
     </style>
 </head>
  
@@ -536,7 +550,7 @@
 	<p>Right click and empty space in the folder and create a New -&gt; Text Document, rename it to <strong>autoexec.cfg</strong></p>
 
 	<p>Now open it with Notepad and put these lines: (this creates a config with a jump throw bound to the "n" key and which you may add anything you wish later)</p>
-<pre>
+<pre><code>
 // start
 
 // enable the console
@@ -550,7 +564,8 @@ alias +jum -jump
 
 // end
 host_writeconfig
-</pre>
+
+</code></pre>
 
 <p>
 	<br>
@@ -561,8 +576,9 @@ host_writeconfig
 
 <p>Desubticked movement binds make movement feel more consistent and more like CS:GO, <a rel="noopener noreferrer" target="_blank" href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/">This link from Reddit</a> is where the desubtick binds come from</p>
 	<p>Open your autoexec.cfg file with Notepad and put these lines anywhere above the line that says 'host_writeconfig' on it <br>
-	and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><p>Test it out on an empty server before playing a game to make sure everything works</p><pre>// default movement binds
-
+	and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><p>Test it out on an empty server before playing a game to make sure everything works</p>
+	<pre><code>
+// default movement binds
 // bind w +forward
 // bind a +left
 // bind d +right
@@ -598,7 +614,8 @@ bind MWHEELDOWN jomp
 alias +jump_ +jump;+jump
 alias -jump_ -jump;-jump;-jump
 alias jomp +jump_;-jump_
-</pre>
+
+</code></pre>
 
 	<p>
 		<br>
