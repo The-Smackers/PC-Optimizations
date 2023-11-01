@@ -535,8 +535,18 @@
 
 	<p>Right click and empty space in the folder and create a New -&gt; Text Document, rename it to <strong>autoexec.cfg</strong></p>
 
-	<p>Now open it with Notepad and put these lines: (this basically creates an empty config to which you may add anything you wish later)</p><pre>// start
+	<p>Now open it with Notepad and put these lines: (this creates a config with a jump throw bound to the "n" key and which you may add anything you wish later)</p>
+<pre>
+// start
+
+// enable the console
 con_enable 1
+
+// jump throw grenades bind
+bind "n" +ju; +ja; +jum
+alias +ju +jump
+alias +ja -attack; -attack2
+alias +jum -jump
 
 // end
 host_writeconfig
@@ -585,16 +595,10 @@ alias -duck_ -duck;-duck;-duck
 // de-subticked jump binds
 
 bind MWHEELDOWN jomp
-
 alias +jump_ +jump;+jump
 alias -jump_ -jump;-jump;-jump
 alias jomp +jump_;-jump_
-
-// jump throw grenades
-bind SPACE +ju; +ja; +jum
-alias +ju +jump
-alias +ja -attack; -attack2
-alias +jum -jump</pre>
+</pre>
 
 	<p>
 		<br>
@@ -602,17 +606,17 @@ alias +jum -jump</pre>
 <footer>
 <div class="footer">
 	<div class="row">
-	<a href="#"><i class="fa fa-facebook"></i></a>
-	<a href="#"><i class="fa fa-instagram"></i></a>
-	<a href="#"><i class="fa fa-youtube"></i></a>
-	<a href="#"><i class="fa fa-twitter"></i></a>
+	<a href="https://github.com/The-Smackers/PC-Optimizations"><i class="fa fa-github"></i></a>
+	<a href="https://steamcommunity.com/groups/thesmackers1"><i class="fa fa-steam"></i></a>
+	<a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+	<a href="https://x.com"><i class="fa fa-twitter"></i></a>
 	</div>
 
 	<div class="row">
 	<ul>
 	<li><a href="#">Contact us</a></li>
 	<li><a href="#">Discord</a></li>
-	<li><a href="#">Steam Group</a></li>
+	<li><a href="#">Steam Giveaways</a></li>
 	<li><a href="#">Leetify Stats</a></li>
 	<li><a href="#">Application</a></li>
 	</ul>
