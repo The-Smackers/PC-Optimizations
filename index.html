@@ -10,6 +10,7 @@
     <title>
           PC and CS2 Optimizations
       </title>
+	  <link href="img/favicon.ico" rel="icon" type="image/x-icon">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
@@ -189,7 +190,8 @@
   <a href="#rbarbios">Enable Resizable BAR in BIOS</a>
   <a href="#rbarnv">Enable Resizable BAR for NVIDIA</a>
   <a href="#rbaramd">Enable Resizable BAR for AMD</a>
-  <a href="#cs2">Counter-Strike 2 Optimizations</a>
+  <a href="#cs2optimize">Counter-Strike 2 Optimizations</a>
+  <a href="#cs2settings">Counter-Strike 2 Settings</a>
   <a href="#autoexec">Counter-Strike 2 autoexec file</a>
   <a href="#desubtick">Counter-Strike 2 desubticked binds</a>
 </div>
@@ -206,9 +208,9 @@
 
 <h2 id="prep">Windows 11 Preparation</h2>
 
-<p>Nothing special/different in Windows 11 so same practices before still apply like the below tips, A clean install is always better than updating to Windows 11</p>
+<p>Nothing special/different in Windows 11 so same practices before still apply like the below tips. A clean install is always better than updating to Windows 11</p>
 
-<p>Backup all your data always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and create a restore point after a fresh install or before completing this guide</p>
+<p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and create a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
 
 <ul>
 	<li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
@@ -277,8 +279,7 @@
 <h2 id="amd">Install AMD Driver</h2>
 
 <ul>
-	<li>blah</li>
-	<li>blah</li>
+	<li>Use AMD's installer and choose minimal or full</li>
 </ul>
 
 <p>
@@ -287,7 +288,7 @@
 
 <h2 id="tempfiles">Windows 10/11 Cleaning</h2>
 
-<p>1. Open Windows explorer (a folder) then highlight the text in address bar and delete it, then paste/type there:</p>
+<h3>1. Open Windows explorer (a folder) then highlight the text in address bar and delete it, then paste/type there:</h3>
 
 <p><strong>C:\Windows\Temp</strong></p>
 
@@ -305,9 +306,9 @@
 	<br>
 </p>
 
-<p id="isPasted">2. Open Windows explorer (a folder) again then highlight the text in address bar and delete it, then paste/type there:</p>
+<h3>2. Open Windows explorer (a folder) again then highlight the text in address bar and delete it, then paste/type there:</p>
 
-<p><strong>%temp%</strong></p>
+<p><strong>%temp%</strong></h3>
 
 <p>and hit <strong id="isPasted">Enter</strong></p>
 
@@ -323,7 +324,7 @@
 	<br>
 </p>
 
-<p>3. Disk cleanup</p>
+<h3>3. Disk cleanup</h3>
 
 <p>Click the search icon on task bar and type <strong>cleanmgr&nbsp;</strong>and hit <strong>Enter</strong></p>
 
@@ -333,7 +334,7 @@
 
 <p><img src="img/clean1.png" style="width: 481px;" class="fr-fic fr-dib fr-fil"></p>
 
-<p>4. Clean up system files</p>
+<h3>4. Clean up system files</h3>
 
 <p>Click the search icon on task bar and type <strong id="isPasted">cleanmgr&nbsp;</strong>and hit <strong>Enter</strong></p>
 
@@ -356,6 +357,7 @@
 	<li>If it gives warning, <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=U5HQvy6p_XI">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
 	<li>If you have an updated BIOS and running/installing windows 11, the only thing I needed to do in my BIOS was turn CSM to disabled and make secure boot option set to Windows UEFI like the linked video at 5:26 as I have ASUS motherboard</li>
 	<li>Also that video doesn't show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">this video</a> shows you how to check</li>
+	<li>If you are using BitLocker Drive encryption you must research how to safely do all of the above on your own</li>
 </ol>
 
 <h2>
@@ -394,6 +396,10 @@
 
 <p><a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=5DqcgHtkm9I">This video</a> explains everything if you wish to learn more.</p>
 
+<p>
+	<br>
+</p>
+
 <h3 id="rbarcheck">Confirm Resize BAR state with NVIDIA Control Panel</h3>
 
 <p>1. Right click of mouse and select [NVIDIA Control Panel]</p>
@@ -414,6 +420,10 @@
 
 <p>If it does not say Yes you must enable it in the BIOS.</p>
 
+<p>
+	<br>
+</p>
+
 <h3 id="rbarbios">Enabled Resize BAR in BIOS setup</h3>
 
 <p>(For example：TUF GAMING X570-PLUS(WI-FI))</p>
@@ -431,6 +441,11 @@
 <p><img class="fr-fic fr-dib fr-fil" style="width: 970px;" src="img/bios3.bmp"></p>
 
 <p>4. Go back to step <a href="#rbarcheck">Confirm Resize BAR state with NVIDIA Control Panel</a> and confirm it&#39;s set to Yes</p>
+
+<p>
+	<br>
+</p>
+
 
 <h3 id="rbarnv">You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
 
@@ -462,23 +477,56 @@
 	<br>
 </p>
 
-<h2 id="cs2">Counter-Strike 2 Optimizations and best settings</h2>
+<h2 id="cs2optimize">Counter-Strike 2 Optimizations</h2>
 
 <ul>
-	<li>blah</li>
-	<li>blah</li>
-	<li>blah</li>
-	<li>
-		<br>
-	</li>
+	<p>Nothing different in CS2 compared to CS:GO other than there's no need to have any Launch Options (delete them if you have any) in Steam, so same practices before still apply like the below tips</p>
+	<p> If updated from CS:GO to CS2 an uninstall and install of CS2 is recommended, backup settings/binds/configs already elsewhere as uninstalling may remove them</p>
+	<p><img src="img/scr1.png" style="width: 715px;" class="fr-fic fr-dib fr-fil"></p>
+	<p>Make sure you set your maximum refresh rate of your display in the Video settings</p>
+	
 </ul>
 
 <p>
 	<br>
 </p>
 
-	<h2 id="autoexec">Creating a Counter-Strike 2 autoexec.cfg file</h2>
+<h2 id="cs2settings">CS2 Best Advanced Video Options</h2>
 
+<h3>These are the settings I use</h3>
+<pre>
+<b>Boost Player Contrast: Enabled</b>            - Enable for best visibility (contrast on enemies)
+<b>Wait for Vertical Sync: Disabled</b>          - Always disable vsync
+<b>Multisampling Anti-Aliasing Mode: 2X MSAA</b> - Lower equals best performance/personal preference
+<b>Global Shadow Quality: High</b>               - High at least for best visibility (shadows on enemies) 
+<b>Model/Texture Detail: High</b>                - Lower equals best performance/personal preference
+<b>Texture Filtering Mode: Bilinear</b>          - Lower equals best performance/personal preference
+<b>Shader Detail: High</b>                       - Lower equals best performance/personal preference
+<b>Particle Detail: Low</b>                      -
+<b>Ambient Occlusion: Medium</b>                 - Medium at least for best visibility (shadows on enemies)
+<b>High Dynamic Range: Performance</b>           - 
+<b>FidelityFX Super Resolution: Disabled(Highest Quality)</b>
+<b>NVIDIA Reflex Low Latency: Enabled</b>        - See section right below (Enabled = less FPS+improved latency)
+</pre>
+<p>
+	<br>
+</p>
+<h3>Counter-Strike 2 NVIDIA Low Latency</h3>
+	<p>Here's a real good thread about <a rel="noopener noreferrer" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3039023209">NVIDIA Low Latency</a>
+	<p>There's a section called <b>How to Measure Latency</b> which can be used to figure out exactly if you should set this setting to Enabled, Enabled+Boost or Off.</p>
+	
+	<p>Most players just set it to Enabled, if you have a consistent 300+ fps in the game you can probably set it to Off</p>
+<p>
+	<br>
+</p>
+
+	<h2 id="autoexec">Creating a Counter-Strike 2 autoexec.cfg file</h2>
+	
+	<h3>What is an autoexec.cfg?</h3>
+	<p>An <a rel="noopener noreferrer" target="_blank" href="https://prosettings.net/blog/how-to-use-a-csgo-config-create-an-autoexec/">autoexec</a> is basically a personal config file that you put in the game's files with your own personal settings (such as crosshair settings, buy binds, sensitivy, and so on)<br> 
+	so that the game automatically loads these settings each time you start up the game.</p>
+
+    <h3>Let's create an autoexec.cfg</h3>
 	<p>In Windows search bar type: <strong>folder options</strong> and then hit <strong>Enter</strong>, click the View tab and then uncheck <strong>Hide extensions for known file types</strong>, click Apply and OK</p>
 
 	<p><img src="img/folder1.png" style="width: 1015px;" class="fr-fic fr-dib fr-fil"></p>
@@ -502,8 +550,8 @@ host_writeconfig
 
 
 <p>Desubticked movement binds make movement feel more consistent and more like CS:GO, <a rel="noopener noreferrer" target="_blank" href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/">This link from Reddit</a> is where the desubtick binds come from</p>
-	<p>Open your autoexec.cfg file with Notepad and put these lines anywhere above the line that says end on it <br>
-	and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><pre>// default movement binds
+	<p>Open your autoexec.cfg file with Notepad and put these lines anywhere above the line that says 'host_writeconfig' on it <br>
+	and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><p>Test it out on an empty server before playing a game to make sure everything works</p><pre>// default movement binds
 
 // bind w +forward
 // bind a +left
