@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0" />
     <title>
           PC and CS2 Optimizations
-      </title>
+    </title>
 	  <link href="img/favicon.ico" rel="icon" type="image/x-icon">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -19,101 +19,95 @@
             font-size: 20px;
             overflow-x: hidden; /* Hide horizontal scrollbar */
         }
-		title {
-			background-color: #2b2b2b;
+        title {
+            background-color: #2b2b2b;
             color: white;
-		}
-
-		.banner {
-			background-image: url(img/logo.png);
-			height: 548px;
-			/* Create the parallax scrolling effect */
-			/* Prevent image from repeating */
-			background-repeat: no-repeat;
-			color: black;
-			font-family: Impact;
-		}
-		h1 {
-			font-size: 40px;
-		}
-		h2 {
-			font-size: 30px;
-		}
-		h3 {
-			font-size: 20px;
-		}
-		p {
-			font-size: 20px;
-		}
-		a:link {
-			color: #9966cc;
-			background-color: transparent;
-			text-decoration: none;
-		}
-
-		a:visited {
-			color: #9966cc;
-			background-color: transparent;
-			text-decoration: none;
-		}
-
-		a:hover {
-			color: #9966cc;
-			background-color: transparent;
-			text-decoration: underline;
-		}
-
-		a:active {
-			color: yellow;
-			background-color: transparent;
-			text-decoration: underline;
-		}
-		.footer{
-			padding:30px 0px;
-			font-family: 'Play', sans-serif;
-			text-align:center;
-		}
-		.footer .row{
-			width:100%;
-			margin:1% 0%;
-			padding:0.6% 0%;
-			color:gray;
-			font-size:0.8em;
-		}
-		.footer .row a{
-			text-decoration:none;
-			color:gray;
-			transition:0.5s;
-		}
-		.footer .row a:hover{
-
-		}
-		.footer .row ul{
-			width:100%;
-		}
-
-		.footer .row ul li{
-			display:inline-block;
-			margin:0px 30px;
-		}
-		.footer .row a i{
-			font-size:2em;
-			margin:0% 1%;
-		}
-		@media (max-width:720px){
-			.footer{
-			text-align:left;
-			padding:5%;
-		}
-		.footer .row ul li{
-			display:block;
-			margin:10px 0px;
-			text-align:left;
-		}
-		.footer .row a i{
-			margin:0% 3%;
-			}
-		}
+        }
+        .banner {
+            background-image: url(img/logo.png);
+            height: 548px;
+            /* Create the parallax scrolling effect */
+            /* Prevent image from repeating */
+            background-repeat: no-repeat;
+            color: black;
+            font-family: Impact;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 20px;
+        }
+        a:link {
+            color: #9966cc;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #9966cc;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #9966cc;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .footer{
+            padding:30px 0px;
+            font-family: 'Play', sans-serif;
+            text-align:center;
+        }
+        .footer .row{
+            width:100%;
+            margin:1% 0%;
+            padding:0.6% 0%;
+            color:gray;
+            font-size:0.8em;
+        }
+        .footer .row a{
+            text-decoration:none;
+            color:gray;
+            transition:0.5s;
+        }
+        .footer .row a:hover{
+        }
+        .footer .row ul{
+            width:100%;
+        }
+        .footer .row ul li{
+            display:inline-block;
+            margin:0px 30px;
+        }
+        .footer .row a i{
+            font-size:2em;
+            margin:0% 1%;
+        }
+        @media (max-width:720px){
+        .footer{
+            text-align:left;
+            padding:5%;
+        }
+        .footer .row ul li{
+            display:block;
+            margin:10px 0px;
+            text-align:left;
+        }
+        .footer .row a i{
+            margin:0% 3%;
+        }
+        }
         .dark-mode {
             background-color: #202020;
             color: white;
@@ -122,622 +116,569 @@
             background-color: white;
             color: #202020;
         }
-		/* The side navigation menu */
-		.sidebar {
-			font-size: 18px;
-			margin: 0;
-			margin-top: 26px;
-			padding: 0;
-			font-weight: bold;
-			width: 230px;
-			background-color: #f0f0f0;
-			position: fixed;
-			height: 100%;
-			overflow: auto;
-		}
-
-		/* Sidebar links */
-		.sidebar a {
-			display: block;
-			color: black;
-			padding: 16px;
-			text-decoration: none;
-		}
-
-		/* Active/current link */
-			.sidebar a.active {
-			background-color: #9966cc;
-			color: white;
-		}
-
-		/* Links on mouse-over */
-			.sidebar a:hover:not(.active) {
-			background-color: #555;
-			color: white;
-		}
-
-		/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-		div.content {
-			margin-left: 230px;
-			padding: 1px 16px;
-			height: 1000px;
-		}
-
-		/* On screens that are less than 700px wide, make the sidebar into a topbar */
-		@media screen and (max-width: 700px) {
-		.sidebar {
-			width: 100%;
-			height: auto;
-			position: relative;
-		}
-		.sidebar a {float: left;}
-			div.content {margin-left: 0;}
-		}
-
-		/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-		@media screen and (max-width: 400px) {
-			.sidebar a {
-			text-align: center;
-			float: none;
-		}
-		}
-		code{
-			color: whitesmoke;
-			background-color: black;
-		}
-
-		pre{
-			color: whitesmoke;
-			background-color: black;
-			scrollbar-color: dark;
-			width: 100%;
-			max-height: 1200px;
-			display: inline-block;
-			overflow: auto;
-		}
+        /* The side navigation menu */
+        .sidebar {
+            font-size: 18px;
+            margin: 0;
+            margin-top: 26px;
+            padding: 0;
+            font-weight: bold;
+            width: 230px;
+            background-color: #f0f0f0;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        /* Sidebar links */
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        /* Active/current link */
+        .sidebar a.active {
+            background-color: #9966cc;
+            color: white;
+        }
+        /* Links on mouse-over */
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+        /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+        div.content {
+            margin-left: 230px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+        /* On screens that are less than 700px wide, make the sidebar into a topbar */
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                float: left;
+            }
+            div.content {
+                margin-left: 0;
+            }
+        }
+        /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+        code{
+            color: whitesmoke;
+            background-color: black;
+        }
+        pre{
+            color: whitesmoke;
+            background-color: black;
+            scrollbar-color: dark;
+            width: 100%;
+            max-height: 1200px;
+            display: inline-block;
+            overflow: auto;
+        }
     </style>
 </head>
 
 <body>
 
-<!-- The sidebar -->
-
-<div class="sidebar">
-  <a class="active" href="">Home</a>
-  <a href="#prep">Windows 11 Preparation</a>
-  <a href="#check">Windows 11 Checklist</a>
-  <a href="#optimize">Windows 11 Optimize</a>
-  <a href="#xmp">XMP Profiles</a>
-  <a href="#clean">Clean GPU Drivers</a>
-  <a href="#nvidia">Install NVIDIA GPU <br>Drivers</a>
-  <a href="#amd">Install AMD GPU <br>Drivers</a>
-  <a href="#tempfiles">Windows Cleaning</a>
-  <a href="#faceit">Windows 11 and Faceit AC</a>
-  <a href="#stutter">Fix Game Stutter</a>
-  <a href="#rbar">What is Resizable BAR</a>
-  <a href="#rbarcheck">Check Resizable BAR Enabled</a>
-  <a href="#rbarbios">Enable Resizable BAR in BIOS</a>
-  <a href="#rbarnv">Enable Resizable BAR for NVIDIA</a>
-  <a href="#rbaramd">Enable Resizable BAR for AMD</a>
-  <a href="#cs2optimize">Counter-Strike 2 <br>Optimizations</a>
-  <a href="#cs2settings">Counter-Strike 2 <br>Settings</a>
-  <a href="#autoexec">Counter-Strike 2 <br>autoexec file</a>
-  <a href="#desubtick">Counter-Strike 2 <br>desubtick binds</a>
-  <p><br></p>
-</div>
-
-
-
-<div class="content">
-<!-- The banner logo -->
-<div class="banner">
-  <div>
-    <h1 id="home">PC and Counter-Strike 2 Optimization Guide</h1>
-    <h4>Get more frames today!</h4>
-  </div>
-</div>
-
-
-    <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
-    <button onclick="darkMode()">Darkmode</button>
-    <button onclick="lightMode()">LightMode</button>
-
-<p>This guide is created and assembled by The Smackers for playing Counter-Strike 2 on a Desktop PC, follow this guide at your own risk.</p>
-<p>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</p>
-
-<h2 id="prep">Windows 11 Preparation</h2>
-
-<p>Nothing special/different in Windows 11 so same practices before still apply like the below tips. A clean install is always better than updating to Windows 11</p>
-
-<p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and create a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
-
-<ul>
-	<li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
-	<li>Check in BIOS or Windows if XMP settings are (still) applied after update to Windows 11:<p>
-    Type <code>CMD</code> into the Windows Search Bar, hit <b>Enter</b> and then type:
-    <code>wmic memorychip get speed</code></p>
-    <p>If it says 2133 for DDR4 or 4800 for DDR5 refer to <a href="#xmp" rel="noopener noreferrer">here to enable XMP</a></p>
-  </li>
-	<li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" target="_blank" rel="noopener noreferrer">video&nbsp;</a>shows you how to check</li>
-	<li>If you are using BitLocker Drive encryption you must research how to safely do all of the above on your own</li>
-</ul>
-
-<p>
-	<br>
-</p>
-
-<h2 id="check">Windows 11 Checklist</h2>
-
-<ol>
-	<li>Install and update Windows 11</li>
-	<li>Now Make sure Game Mode is enabled</li>
-	<li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a><p><img class="fr-fic fr-dib fr-fil" style="width: 532px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 695px;" src="img/gpu2.png"></p></li>
-	<li>Now Check Nvidia control panel, click <strong>Manage 3d Settings</strong>, ensure that <strong>Preferred refresh rate</strong> is set to <strong>Highest available</strong> and <strong>Power management mode</strong> is set to <strong>Prefer maximum performance</strong> and click Apply
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/nvidia.png"></p></li>
-	<li>Now Click Windows Search Bar and type <code>control panel</code>, hit <strong>Enter</strong>, click <strong>Power Options</strong> if you're on a Desktop PC change power plan to either <strong>High Performance</strong> or <a target="_blank" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a>
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/power.png"></p></li>
-
-</ol>
-
-<p>
-	<br>
-</p>
-
-<h2 id="optimize">Windows 11 Optimization</h2>
-
-<ol>
-	<li>Open Task Manager, click Startup apps and set all apps to disabled unless actually want them starting with Windows</li>
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/startup.png"></p>
-
-
-	<li>Open Task Manager, click Processes, compare to this image of how yours should look after</li>
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/processes.png"></p>
-
-	<li>Open Windows Settings, click Gaming -> Xbox Game Bar and turn it Off</li>
-
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/gamebar.png"></p>
-
-
-	<li>Open Windows Settings, click Apps -> Installed apps
-
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app1.png"></p>
-
-	<li>Now click the ellipsis (3 dots) on each Microsoft Corporation app that is not named "Runtime" and select <b>Advanced options</b>
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/ellipsis.png"></p>
-	<li>Now click the dropdown for <b>Let this app run in background</b> and change to Never. Do this for all Microsoft Corporation apps except for Windows Security</li>
-	</li>
+    <!-- The sidebar -->
+    <div class="sidebar">
+        <a class="active" href="">Home</a>
+        <a href="#prep">Windows 11 Preparation</a>
+        <a href="#check">Windows 11 Checklist</a>
+        <a href="#optimize">Windows 11 Optimize</a>
+        <a href="#xmp">XMP Profiles</a>
+        <a href="#clean">Clean GPU Drivers</a>
+        <a href="#nvidia">Install NVIDIA GPU <br>Drivers</a>
+        <a href="#amd">Install AMD GPU <br>Drivers</a>
+        <a href="#tempfiles">Windows Cleaning</a>
+        <a href="#faceit">Windows 11 and Faceit AC</a>
+        <a href="#stutter">Fix Game Stutter</a>
+        <a href="#rbar">What is Resizable BAR</a>
+        <a href="#rbarcheck">Check Resizable BAR Enabled</a>
+        <a href="#rbarbios">Enable Resizable BAR in BIOS</a>
+        <a href="#rbarnv">Enable Resizable BAR for NVIDIA</a>
+        <a href="#rbaramd">Enable Resizable BAR for AMD</a>
+        <a href="#cs2optimize">Counter-Strike 2 <br>Optimizations</a>
+        <a href="#cs2settings">Counter-Strike 2 <br>Settings</a>
+        <a href="#autoexec">Counter-Strike 2 <br>autoexec file</a>
+        <a href="#desubtick">Counter-Strike 2 <br>desubtick binds</a>
+        <p><br></p>
+    </div>
 
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app2.png"></p>
+    <div class="content">
+        <!-- The banner logo -->
+        <div class="banner">
+            <div>
+                <h1 id="home">PC and Counter-Strike 2 Optimization Guide</h1>
+                <h4>Get more frames today!</h4>
+            </div>
+        </div>
 
-	<li>Restart Windows to complete</li>
-</ol>
-<p>
-	<br>
-</p>
+        <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
+        <button onclick="darkMode()">Darkmode</button>
+        <button onclick="lightMode()">LightMode</button>
 
-<h2 id="xmp">What is an XMP profile?</h2>
+        <p>This guide is created and assembled by The Smackers for playing Counter-Strike 2 on a Desktop PC, follow this guide at your own risk.</p>
+        <p>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</p>
 
-<p>XMP or Extreme Memory Profiles, is an Intel technology and EXPO or Extended Profiles is AMD technology for Overclocking<br> that allows you to change multiple memory settings by simply selecting a different profile, taking advantage of higher than standard memory speeds<br>
-If you’ve ever wanted to overclock your memory but didn’t want to fiddle with frequency, voltage and timings, this is the way to do it</p>
-<p>
-	<br>
-</p>
-<h3>Should I use an XMP profile?</h3>
-In short, yes. All high-performance RAM use XMP profiles, because they all run above standard DDR industry specifications<br>
-If you don't enable XMP in your BIOS, they will run at your system's standard specifications that are dependent on the CPU you have and you won't take advantage of the higher clock speeds that your RAM may have
-<p>
-	<br>
-</p>
-<h3>Check if XMP profile is already enabled?</h3>
+        <h2 id="prep">Windows 11 Preparation</h2>
 
-<p>Type <code>CMD</code> into the Windows Search Bar, hit <b>Enter</b> and then type:</p>
-<code>wmic memorychip get speed</code>
-<p>If it says 2133 for DDR4 or 4800 for DDR5 do the following step to enable XMP profile</p>
-<p>
-	<br>
-</p>
-<h3>How to enable the XMP profile?</h3>
+        <p>Nothing special/different in Windows 11 so same practices before still apply like the below tips. A clean install is always better than updating to Windows 11</p>
+        <p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and create a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
 
-This is normally done through the BIOS utility, refer to your motherboard documentation for specifics<br>
-<a href="https://www.gskill.com/community/1584933243/1646893264/How-to-Enable-XMP-EXPO-for-DDR4-DDR5#how-to-enable-xmp-expo" target="_blank" rel="noopener noreferrer">This link from GSKILL</a> is a great reference guide for most motherboards
-<p>
-	<br>
-</p>
-<h2 id="clean">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
+        <ul>
+            <li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
+            <li>Check in BIOS or Windows if XMP settings are (still) applied after update to Windows 11:<p>Type <code>CMD</code> into the Windows Search Bar, hit <b>Enter</b> and then type: <code>wmic memorychip get speed</code></p>
+              <p>If it says 2133 for DDR4 or 4800 for DDR5 refer to <a href="#xmp" rel="noopener noreferrer">here to enable XMP</a></p></li>
+            <li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" target="_blank" rel="noopener noreferrer">video&nbsp;</a>shows you how to check</li>
+            <li>If you are using BitLocker Drive encryption you must research how to safely do all of the above on your own</li>
+        </ul>
 
-<h3>Display Driver Uninstaller Setup (to cleanup any currently installed drivers)</h3>
+        <p><br></p>
 
-<ul>
-	<li style="text-align: justify;">Download and install <a href="https://www.wagnardsoft.com/forums/viewtopic.php?t=4316" target="_blank" rel="noopener noreferrer">DDU&nbsp;</a>and start the program</li>
-	<li style="text-align: justify;">Copy the Options like the image below and then click Close</li>
-</ul>
+        <h2 id="check">Windows 11 Checklist</h2>
 
-<p><img src="img/2.png" style="width: 634px;" class="fr-fic fr-dib fr-fil"></p>
+        <ol>
+            <li>Install and update Windows 11</li>
+            <li>Now Make sure Game Mode is enabled</li>
+            <li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a>
+              <p><img class="fr-fic fr-dib fr-fil" style="width: 532px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 695px;" src="img/gpu2.png"></p></li>
+            <li>Now Check Nvidia control panel, click <strong>Manage 3d Settings</strong>, ensure that <strong>Preferred refresh rate</strong> is set to <strong>Highest available</strong> and <strong>Power management mode</strong> is set to <strong>Prefer maximum performance</strong> and click Apply
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/nvidia.png"></p></li>
+            <li>Now Click Windows Search Bar and type <code>control panel</code>, hit <strong>Enter</strong>, click <strong>Power Options</strong> if you're on a Desktop PC change power plan to either <strong>High Performance</strong> or <a target="_blank" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/power.png"></p></li>
+        </ol>
 
-<ul>
-	<li>Select your device type and choose NVIDIA or AMD GPU from the dropdown</li>
-	<li>Click Clean and restart</li>
-	<li>Your PC will restart after a couple of minutes be patient</li>
-</ul>
+        <p><br></p>
 
-<p><img src="img/1.png" style="width: 635px;" class="fr-fic fr-dib fr-fil"></p>
+        <h2 id="optimize">Windows 11 Optimization</h2>
 
-<p>
-	<br>
-</p>
+        <ol>
+            <li>Open Task Manager, click Startup apps and set all apps to disabled unless actually want them starting with Windows</li>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/startup.png"></p>
 
-<h2 id="nvidia">Clean Install of NVIDIA Driver using NVCleanstall</h2>
+            <li>Open Task Manager, click Processes, compare to this image of how yours should look after</li>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/processes.png"></p>
 
-<ul>
-	<li>Download, install and open <a rel="noopener noreferrer" target="_blank" href="https://www.techpowerup.com/download/techpowerup-nvcleanstall">NVCleanstall</a></li>
-	<li>Manually select a driver version and choose the latest 64 bit Desktop driver</li>
-	<li>Click Next and click Next again</li>
-	<li>Copy the settings like the images below on the Installation Tweaks screen then click Next (If you want GeForce Experience or ShadowPlay check those boxes)</li>
-	<li>Click Next and then click Install and wait for the installation to complete</li>
-</ul>
+            <li>Open Windows Settings, click Gaming -> Xbox Game Bar and turn it Off</li>
 
-<p style="display:inline-block;"><img src="img/3.png" style="width: 374px;" class="fr-fic fr-dib fr-fil"><img src="img/5.png" style="width: 374px;" class="fr-fic fr-dib"><img src="img/4.png" style="width: 374px;" class="fr-fic fr-dib"><img src="img/6.png" style="width: 374px;" class="fr-fic fr-dib"></p>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/gamebar.png"></p>
 
-<p style="display:inline-block;">
-	<br>
-</p>
+            <li>Open Windows Settings, click Apps -> Installed apps</li>
 
-<h2 id="amd">Install AMD Driver</h2>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app1.png"></p>
 
-<ul>
-	<li>Use AMD's installer and choose minimal or full</li>
-</ul>
+            <li>Now click the ellipsis (3 dots) on each Microsoft Corporation app that is not named "Runtime" and select <b>Advanced options</b></li>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/ellipsis.png"></p>
+            <li>Now click the dropdown for <b>Let this app run in background</b> and change to Never. Do this for all Microsoft Corporation apps except for Windows Security</li>
 
-<p>
-	<br>
-</p>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app2.png"></p>
 
-<h2 id="tempfiles">Windows 10/11 Cleaning</h2>
+            <li>Restart Windows to complete</li>
+        </ol>
 
-<h3>1. Open Windows explorer (a folder) then highlight the text in address bar and delete it, then paste/type there:</h3>
+        <p><br></p>
 
-<p><code>C:\Windows\Temp</code></p>
+        <h2 id="xmp">What is an XMP profile?</h2>
 
-<p>and hit <strong>Enter</strong><strong><p><img src="img/folder.png" style="width: 929px;" class="fr-fic fr-dib fr-fil"></p></strong>Click okay if asked for Admin privileges</p>
+        <p>XMP or Extreme Memory Profiles, is an Intel technology and EXPO or Extended Profiles is AMD technology for Overclocking<br> that allows you to change multiple memory settings by simply selecting a different profile, taking advantage of higher than standard memory speeds<br>
+        If you’ve ever wanted to overclock your memory but didn’t want to fiddle with frequency, voltage and timings, this is the way to do it</p>
 
-<p>Select all files in the folder by pressing CTRL+A on your keyboard after selecting a random file</p>
+        <p><br></p>
 
-<p>Press your <strong>Delete&nbsp;</strong>key</p>
+        <h3>Should I use an XMP profile?</h3>
+        In short, yes. All high-performance RAM use XMP profiles, because they all run above standard DDR industry specifications<br>
+        If you don't enable XMP in your BIOS, they will run at your system's standard specifications that are dependent on the CPU you have and you won't take advantage of the higher clock speeds that your RAM may have
 
-<p>Do this for all current items box and click Skip</p>
+        <p><br></p>
 
-<p>Some items may not delete, this is fine, move on</p>
+        <h3>Check if XMP profile is already enabled?</h3>
 
-<p>
-	<br>
-</p>
+        <p>Type <code>CMD</code> into the Windows Search Bar, hit <b>Enter</b> and then type:</p>
+        <code>wmic memorychip get speed</code>
+        <p>If it says 2133 for DDR4 or 4800 for DDR5 do the following step to enable XMP profile</p>
 
-<h3>2. Open Windows explorer (a folder) again then highlight the text in address bar and delete it, then paste/type there:</h3>
+        <p><br></p>
 
-<p><code>%temp%</code></p>
+        <h3>How to enable the XMP profile?</h3>
 
-<p>and hit <strong>Enter</strong></p>
+        This is normally done through the BIOS utility, refer to your motherboard documentation for specifics<br>
+        <a href="https://www.gskill.com/community/1584933243/1646893264/How-to-Enable-XMP-EXPO-for-DDR4-DDR5#how-to-enable-xmp-expo" target="_blank" rel="noopener noreferrer">This link from GSKILL</a> is a great reference guide for most motherboards
 
-<p>Select all the files in the folder by pressing CTRL+A on your keyboard after selecting a random file</p>
+        <p><br></p>
 
-<p>Press your <strong>Delete&nbsp;</strong>key</p>
+        <h2 id="clean">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
 
-<p>Tick the Do this for all current items box and click Skip</p>
+        <h3>Display Driver Uninstaller Setup (to cleanup any currently installed drivers)</h3>
 
-<p>Some items may not delete, this is fine, move on</p>
+        <ul>
+            <li style="text-align: justify;">Download and install <a href="https://www.wagnardsoft.com/forums/viewtopic.php?t=4316" target="_blank" rel="noopener noreferrer">DDU&nbsp;</a>and start the program</li>
+            <li style="text-align: justify;">Copy the Options like the image below and then click Close</li>
+        </ul>
 
-<p>
-	<br>
-</p>
+        <p><img src="img/2.png" style="width: 634px;" class="fr-fic fr-dib fr-fil"></p>
 
-<h3>3. Disk cleanup</h3>
+        <ul>
+            <li>Select your device type and choose NVIDIA or AMD GPU from the dropdown</li>
+            <li>Click Clean and restart</li>
+            <li>Your PC will restart after a couple of minutes be patient</li>
+        </ul>
 
-<p>Type in Windows Search Bar <code>cleanmgr</code> and hit <strong>Enter</strong></p>
+        <p><img src="img/1.png" style="width: 635px;" class="fr-fic fr-dib fr-fil"></p>
 
-<p>Select C drive and press <strong>OK</strong></p>
+        <p><br></p>
 
-<p>Tick every box and press <strong>OK&nbsp;</strong>and then click Delete Files (Warning: this will delete your image and video thumbnails and anything in your Recycle Bin)</p>
+        <h2 id="nvidia">Clean Install of NVIDIA Driver using NVCleanstall</h2>
 
-<p><img src="img/clean1.png" style="width: 481px;" class="fr-fic fr-dib fr-fil"></p>
+        <ul>
+            <li>Download, install and open <a rel="noopener noreferrer" target="_blank" href="https://www.techpowerup.com/download/techpowerup-nvcleanstall">NVCleanstall</a></li>
+            <li>Manually select a driver version and choose the latest 64 bit Desktop driver</li>
+            <li>Click Next and click Next again</li>
+            <li>Copy the settings like the images below on the Installation Tweaks screen then click Next (If you want GeForce Experience or ShadowPlay check those boxes)</li>
+            <li>Click Next and then click Install and wait for the installation to complete</li>
+        </ul>
 
-<h3>4. Clean up system files</h3>
+        <p><img src="img/3.png" style="width: 374px;" class="fr-fic fr-dib fr-fil"><img src="img/5.png" style="width: 374px;" class="fr-fic fr-dib"><img src="img/4.png" style="width: 374px;" class="fr-fic fr-dib"><img src="img/6.png" style="width: 374px;" class="fr-fic fr-dib"></p>
 
-<p>Type in Windows Search Bar <code>cleanmgr</code> and hit <strong>Enter</strong></p>
+        <p><br></p>
 
-<p>Click Clean up system files</p>
+        <h2 id="amd">Install AMD Driver</h2>
 
-<p>Choose what you want to clean, most people do everything</p>
+        <ul>
+            <li>Use AMD's installer and choose minimal or full</li>
+        </ul>
 
-<p>Click OK this process might take a bit longer, be patient</p>
+        <p><br></p>
 
-<p><img src="img/clean2.png" style="width: 480px;" class="fr-fic fr-dib fr-fil"></p>
+        <h2 id="tempfiles">Windows 10/11 Cleaning</h2>
 
-<p>
-	<br>
-</p>
+        <h3>1. Open Windows explorer (a folder) then highlight the text in address bar and delete it, then paste/type there:</h3>
 
-<h2 id="faceit">These things are needed for running Faceit AC or Valorant AC in Windows 11</h2>
+        <p><code>C:\Windows\Temp</code></p>
 
-<ol>
-	<li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get <a target="_blank" data-fr-linked="true" href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC">this warning</a></li>
-	<li>If it gives warning, <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=U5HQvy6p_XI">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
-	<li>If you have an updated BIOS and running/installing windows 11, the only thing I needed to do in my BIOS was turn CSM to disabled and make secure boot option set to Windows UEFI like the linked video at 5:26 as I have ASUS motherboard</li>
-	<li>Also that video doesn't show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">this video</a> shows you how to check</li>
-	<li>If you are using BitLocker Drive encryption you must research how to safely do all of the above on your own</li>
-</ol>
+        <p>and hit <strong>Enter</strong><strong><p><img src="img/folder.png" style="width: 929px;" class="fr-fic fr-dib fr-fil"></p></strong>Click okay if asked for Admin privileges</p>
 
-<h2>
-	<br>
-</h2>
+        <p>Select all files in the folder by pressing CTRL+A on your keyboard after selecting a random file</p>
 
-<h2 id="stutter">Easy Fix for PC Stuttering in games (GameBar Presence Writer)</h2>
+        <p>Press your <strong>Delete&nbsp;</strong>key</p>
 
-<ul>
-	<li>Start the game you wish to play and then open the <strong>Task Manager</strong> and locate the process <strong>Gamebar Presence Writer</strong></li>
-	<li>Right click it and End the process and enjoy your game</li>
-</ul>
+        <p>Do this for all current items box and click Skip</p>
 
-<p>
-	<br>
-</p>
+        <p>Some items may not delete, this is fine, move on</p>
 
-<h2 id="rbar">Enable Resizable BAR for NVIDIA 2000/3000/4000 Series GPU</h2>
+        <p><br></p>
 
-<h3>If your system has these components or anything newer rBAR should be supported (google your cpu, motherboard and gpu to see if supported)</h3>
+        <h3>2. Open Windows explorer (a folder) again then highlight the text in address bar and delete it, then paste/type there:</h3>
 
-<ul style="list-style-type: square;">
-	<li>Intel CPU: 10th, 11th, 12th, 13th series and newer</li>
-	<li>AMD CPU: AMD Motherboard: 300 series(bios update), 400, 500, 600 series and newer</li>
-	<li>NVIDIA RTX 3000 series or newer</li>
-	<li>AMD Radeon RX 5000 series or newer with unofficial patch: RX 500 series/Vega56,64/Radeon VII</li>
-</ul>
+        <p><code>%temp%</code></p>
 
-<p>You should have a relatively up to date BIOS, back up your data as per usual</p>
+        <p>and hit <strong>Enter</strong></p>
 
-<h3 id="rbar">What is Resizable BAR?</h3>
+        <p>Select all the files in the folder by pressing CTRL+A on your keyboard after selecting a random file</p>
 
-<p>All gaming PCs produce an on-screen image by way of the CPU processing data, textures, shaders and the like, from the graphics card&rsquo;s frame buffer. Usually the CPU can only access this buffer in 256MB read blocks, which obviously isn&rsquo;t very much when modern GPUs regularly have 8GB of video memory or much, much more.</p>
+        <p>Press your <strong>Delete&nbsp;</strong>key</p>
 
-<p>Resizable BAR essentially makes the entirety of the graphics frame buffer accessible to the CPU at once; where it could once sip, it now guzzles. The idea is that once textures, shaders and geometry are loading in faster, games should run faster with higher frame rates.</p>
+        <p>Tick the Do this for all current items box and click Skip</p>
 
-<p><a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=5DqcgHtkm9I">This video</a> explains everything if you wish to learn more.</p>
+        <p>Some items may not delete, this is fine, move on</p>
 
-<p>
-	<br>
-</p>
+        <p><br></p>
 
-<h3 id="rbarcheck">Confirm Resize BAR state with NVIDIA Control Panel</h3>
+        <h3>3. Disk cleanup</h3>
 
-<p>1. Right click of mouse and select [NVIDIA Control Panel]</p>
+        <p>Type in Windows Search Bar <code>cleanmgr</code> and hit <strong>Enter</strong></p>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 232px;" src="img/nv1.bmp"></p>
+        <p>Select C drive and press <strong>OK</strong></p>
 
-<p>2. Click [Help] option and then click [System Information] option</p>
+        <p>Tick every box and press <strong>OK&nbsp;</strong>and then click Delete Files (Warning: this will delete your image and video thumbnails and anything in your Recycle Bin)</p>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 691px;" src="img/nv2.bmp"></p>
+        <p><img src="img/clean1.png" style="width: 481px;" class="fr-fic fr-dib fr-fil"></p>
 
-<p>3. Resizable BAR show Yes means enabled</p>
+        <h3>4. Clean up system files</h3>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 678px;" src="img/nv3.bmp"></p>
+        <p>Type in Windows Search Bar <code>cleanmgr</code> and hit <strong>Enter</strong></p>
 
-<p>
-	<br>
-</p>
+        <p>Click Clean up system files</p>
 
-<p>If it does not say Yes you must enable it in the BIOS.</p>
+        <p>Choose what you want to clean, most people do everything</p>
 
-<p>
-	<br>
-</p>
+        <p>Click OK this process might take a bit longer, be patient</p>
 
-<h3 id="rbarbios">Enabled Resize BAR in BIOS setup</h3>
+        <p><img src="img/clean2.png" style="width: 480px;" class="fr-fic fr-dib fr-fil"></p>
 
-<p>(For example：TUF GAMING X570-PLUS(WI-FI))</p>
+        <p><br></p>
 
-<p>1. Power on the system and press &lt;delete&gt; key to enter BIOS [EZ Mode]</p>
+        <h2 id="faceit">These things are needed for running Faceit AC or Valorant AC in Windows 11</h2>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 978px;" src="img/bios1.bmp"></p>
+        <ol>
+            <li>Open and login to Faceit AC and see if it gives you a notice/warning to be able to play, you may get <a target="_blank" data-fr-linked="true" href="https://support.faceit.com/hc/en-us/articles/4406281700370-Secure-Boot-needs-to-be-enabled-to-launch-FACEIT-AC">this warning</a></li>
+            <li>If it gives warning, <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=U5HQvy6p_XI">this video</a> good to follow to see how they check if secure boot and/or TPM is setup/enabled/on</li>
+            <li>If you have an updated BIOS and running/installing windows 11, the only thing I needed to do in my BIOS was turn CSM to disabled and make secure boot option set to Windows UEFI like the linked video at 5:26 as I have ASUS motherboard</li>
+            <li>Also that video doesn't show it but your Windows drive must be formatted GPT not MBR, yours probably is good but <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=lwaIWu_41_0">this video</a> shows you how to check</li>
+            <li>If you are using BitLocker Drive encryption you must research how to safely do all of the above on your own</li>
+        </ol>
 
-<p>2. Click Resize BAR icon and set to [On]</p>
+        <p><br></p>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 975px;" src="img/bios2.bmp"></p>
+        <h2 id="stutter">Easy Fix for PC Stuttering in games (GameBar Presence Writer)</h2>
 
-<p>3. Press &lt;F10&gt; key and click &lt;OK&gt; , the system will auto reboot</p>
+        <ul>
+            <li>Start the game you wish to play and then open the <strong>Task Manager</strong> and locate the process <strong>Gamebar Presence Writer</strong></li>
+            <li>Right click it and End the process and enjoy your game</li>
+        </ul>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 970px;" src="img/bios3.bmp"></p>
+        <p><br></p>
 
-<p>4. Go back to step <a href="#rbarcheck">Confirm Resize BAR state with NVIDIA Control Panel</a> and confirm it&#39;s set to Yes</p>
+        <h2 id="rbar">Enable Resizable BAR for NVIDIA 2000/3000/4000 Series GPU</h2>
 
-<p>
-	<br>
-</p>
+        <h3>If your system has these components or anything newer rBAR should be supported (google your cpu, motherboard and gpu to see if supported)</h3>
 
+        <ul style="list-style-type: square;">
+            <li>Intel CPU: 10th, 11th, 12th, 13th series and newer</li>
+            <li>AMD CPU: AMD Motherboard: 300 series(bios update), 400, 500, 600 series and newer</li>
+            <li>NVIDIA RTX 3000 series or newer</li>
+            <li>AMD Radeon RX 5000 series or newer with unofficial patch: RX 500 series/Vega56,64/Radeon VII</li>
+        </ul>
 
-<h3 id="rbarnv">You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
+        <p>You should have a relatively up to date BIOS, back up your data as per usual</p>
 
-<ul>
-	<li>Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" target="_blank" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
-	<li>Open nvidiaProfileInspector and scroll down to section <strong>5 - Common</strong> and change the 3 rBAR options like the image below</li>
-</ul>
+        <h3 id="rbar">What is Resizable BAR?</h3>
 
-<p><img class="fr-fic fr-dib fr-fil" style="width: 1208px;" src="img/7.png"></p>
+        <p>All gaming PCs produce an on-screen image by way of the CPU processing data, textures, shaders and the like, from the graphics card&rsquo;s frame buffer. Usually the CPU can only access this buffer in 256MB read blocks, which obviously isn&rsquo;t very much when modern GPUs regularly have 8GB of video memory or much, much more.</p>
 
-<ul>
-	<li>Then click Apply Changes top right</li>
-	<li>This profile that&#39;s saved is the Global Profile, if you wish to disable rBAR you can do it on a per game basis by clicking on the Profiles drop down at top left</li>
-</ul>
+        <p>Resizable BAR essentially makes the entirety of the graphics frame buffer accessible to the CPU at once; where it could once sip, it now guzzles. The idea is that once textures, shaders and geometry are loading in faster, games should run faster with higher frame rates.</p>
 
-<p>
-	<br>
-</p>
+        <p><a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=5DqcgHtkm9I">This video</a> explains everything if you wish to learn more.</p>
 
-<h2 id="rbaramd">Enable Resizable BAR/Smart Access Memory for AMD Series GPU</h2>
+        <p><br></p>
 
-<ul>
-	<li>step 4</li>
-	<li>step 2</li>
-	<li>step 0</li>
-</ul>
+        <h3 id="rbarcheck">Confirm Resize BAR state with NVIDIA Control Panel</h3>
 
-<p>
-	<br>
-</p>
+        <p>1. Right click of mouse and select [NVIDIA Control Panel]</p>
 
-<h2 id="cs2optimize">Counter-Strike 2 Optimizations</h2>
+        <p><img class="fr-fic fr-dib fr-fil" style="width: 232px;" src="img/nv1.bmp"></p>
 
-	<p>Nothing different in CS2 compared to CS:GO other than there's no need to have any Launch Options (delete them if you have any) in Steam, so same practices before still apply like the below tips</p>
-	<p><img src="img/library.png" style="width: 1175px;" class="fr-fic fr-dib fr-fil"></p>
-	<p> If updated from CS:GO to CS2 an uninstall and install of CS2 is recommended, backup settings/binds/configs already elsewhere as uninstalling may remove them</p>
-	<p><img src="img/scr1.png" style="width: 715px;" class="fr-fic fr-dib fr-fil"></p>
-	<p>Make sure you set your maximum refresh rate of your display in the Video settings</p>
+        <p>2. Click [Help] option and then click [System Information] option</p>
 
-<p>
-	<br>
-</p>
+        <p><img class="fr-fic fr-dib fr-fil" style="width: 691px;" src="img/nv2.bmp"></p>
 
-<h2 id="cs2settings">Counter-Strike 2 Best Advanced Video Options</h2>
+        <p>3. Resizable BAR show Yes means enabled</p>
 
-<p>These are the settings I use</p>
-<pre>
-<b>Boost Player Contrast: Enabled</b>            - Enable for best visibility (contrast on enemies)
-<b>Wait for Vertical Sync: Disabled</b>          - Always disable vsync
-<b>Multisampling Anti-Aliasing Mode: 2X MSAA</b> - Lower equals best performance/personal preference
-<b>Global Shadow Quality: High</b>               - High at least for best visibility (shadows on enemies)
-<b>Model/Texture Detail: High</b>                - Lower equals best performance/personal preference
-<b>Texture Filtering Mode: Bilinear</b>          - Lower equals best performance/personal preference
-<b>Shader Detail: High</b>                       - Lower equals best performance/personal preference
-<b>Particle Detail: Low</b>                      -
-<b>Ambient Occlusion: Medium</b>                 - Medium at least for best visibility (shadows on enemies)
-<b>High Dynamic Range: Performance</b>           -
-<b>FidelityFX Super Resolution: Disabled(Highest Quality)</b>
-<b>NVIDIA Reflex Low Latency: Enabled</b>        - See section right below (Enabled = less FPS+improved latency)
-</pre>
-<p>
-	<br>
-</p>
-<h3>Counter-Strike 2 NVIDIA Low Latency</h3>
-	<p>Here's a real good thread about <a rel="noopener noreferrer" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3039023209">NVIDIA Low Latency</a>
-	<p>There's a section called <b>How to Measure Latency</b> which can be used to figure out exactly if you should set this setting to Enabled, Enabled+Boost or Off.</p>
+        <p><img class="fr-fic fr-dib fr-fil" style="width: 678px;" src="img/nv3.bmp"></p>
 
-	<p>Most players just set it to Enabled, if you have a consistent 300+ fps in the game you can probably set it to Off</p>
-<p>
-	<br>
-</p>
+        <p><br></p>
 
-	<h2 id="autoexec">Creating a Counter-Strike 2 autoexec.cfg file</h2>
+        <p>If it does not say Yes you must enable it in the BIOS.</p>
 
-	<h3>What is an autoexec.cfg?</h3>
-	<p>An <a rel="noopener noreferrer" target="_blank" href="https://prosettings.net/blog/how-to-use-a-csgo-config-create-an-autoexec/">autoexec</a> is basically a personal config file that you put in the game's files with your own personal settings (such as crosshair settings, buy binds, sensitivity, and so on)<br>
-	so that the game automatically loads these settings each time you start up the game.</p>
+        <p><br></p>
 
-    <h3>Let's create an autoexec.cfg</h3>
-	<p>In Windows search bar type: <code>folder options</code> and then hit <strong>Enter</strong>, click the View tab and then uncheck <strong>Hide extensions for known file types</strong>, click Apply and OK</p>
+        <h3 id="rbarbios">Enabled Resize BAR in BIOS setup</h3>
 
-	<p><img src="img/folder1.png" style="width: 1015px;" class="fr-fic fr-dib fr-fil"></p>
+        <p>(For example：TUF GAMING X570-PLUS(WI-FI))</p>
 
-	<p>Now open Windows explorer (a folder) and browse to: <strong>C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg</strong></p>
+        <p>1. Power on the system and press &lt;delete&gt; key to enter BIOS [EZ Mode]</p>
 
-	<p>Right click and empty space in the folder and create a New -&gt; Text Document, rename it to <strong>autoexec.cfg</strong></p>
+        <p><img class="fr-fic fr-dib fr-fil" style="width: 978px;" src="img/bios1.bmp"></p>
 
-	<p>Now open it with Notepad and put these lines: (this creates a config with a jump throw bound to the "n" key and which you may add anything you wish later)</p>
-<pre><code>
-// start
+        <p>2. Click Resize BAR icon and set to [On]</p>
 
-// enable the console
-con_enable 1
+        <p><img class="fr-fic fr-dib fr-fil" style="width: 975px;" src="img/bios2.bmp"></p>
 
-// jump throw grenades bind
-bind "n" +ju; +ja; +jum
-alias +ju +jump
-alias +ja -attack; -attack2
-alias +jum -jump
+        <p>3. Press &lt;F10&gt; key and click &lt;OK&gt; , the system will auto reboot</p>
 
-// end
-host_writeconfig
+        <p><img class="fr-fic fr-dib fr-fil" style="width: 970px;" src="img/bios3.bmp"></p>
 
-</code></pre>
+        <p>4. Go back to step <a href="#rbarcheck">Confirm Resize BAR state with NVIDIA Control Panel</a> and confirm it&#39;s set to Yes</p>
 
-<p>Ctrl+S to Save file, tnen Ctrl+W to Close Notepad</p>
+        <p><br></p>
 
-<p>
-	<br>
-</p>
+        <h3 id="rbarnv">You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
 
-	<h2 id="desubtick">Add Counter-Strike 2 desubticked binds for autoexec.cfg file</h2>
+        <ul>
+            <li>Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" target="_blank" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
+            <li>Open nvidiaProfileInspector and scroll down to section <strong>5 - Common</strong> and change the 3 rBAR options like the image below</li>
+        </ul>
 
+        <p><img class="fr-fic fr-dib fr-fil" style="width: 1208px;" src="img/7.png"></p>
 
-<p>Desubticked movement binds make movement feel more consistent and more like CS:GO, <a rel="noopener noreferrer" target="_blank" href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/">This link from Reddit</a> is where the desubtick binds come from</p>
-	<p>Open your autoexec.cfg file with Notepad and put these lines anywhere above the line that says 'host_writeconfig' on it <br>
-	and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><p>Test it out on an empty server before playing a game to make sure everything works</p>
-	<pre><code>
-// default movement binds
-// bind w +forward
-// bind a +left
-// bind d +right
-// bind s +back
-// bind CTRL +duck
-// bind MWHEELDOWN +jump
-// bind SPACE +jump
+        <ul>
+            <li>Then click Apply Changes top right</li>
+            <li>This profile that&#39;s saved is the Global Profile, if you wish to disable rBAR you can do it on a per game basis by clicking on the Profiles drop down at top left</li>
+        </ul>
 
-// de-subticked movement binds
+        <p><br></p>
 
-bind w +forward_
-bind a +left_
-bind s +back_
-bind d +right_
-alias +forward_ +forward;+forward
-alias -forward_ -forward;-forward;-forward
-alias +left_ +left;+left
-alias -left_ -left;-left;-left
-alias +back_ +back;+back
-alias -back_ -back;-back;-back
-alias +right_ +right;+right
-alias -right_ -right;-right;-right
+        <h2 id="rbaramd">Enable Resizable BAR/Smart Access Memory for AMD Series GPU</h2>
 
-// de-subticked crouch binds
+        <ul>
+            <li>step 4</li>
+            <li>step 2</li>
+            <li>step 0</li>
+        </ul>
 
-bind CTRL +duck_
-alias +duck_ +duck;+duck
-alias -duck_ -duck;-duck;-duck
+        <p><br></p>
 
-// de-subticked jump binds
+        <h2 id="cs2optimize">Counter-Strike 2 Optimizations</h2>
 
-bind MWHEELDOWN jomp
-alias +jump_ +jump;+jump
-alias -jump_ -jump;-jump;-jump
-alias jomp +jump_;-jump_
+        <p>Nothing different in CS2 compared to CS:GO other than there's no need to have any Launch Options (delete them if you have any) in Steam, so same practices before still apply like the below tips</p>
+        <p><img src="img/library.png" style="width: 1175px;" class="fr-fic fr-dib fr-fil"></p>
+        <p> If updated from CS:GO to CS2 an uninstall and install of CS2 is recommended, backup settings/binds/configs already elsewhere as uninstalling may remove them</p>
+        <p><img src="img/scr1.png" style="width: 715px;" class="fr-fic fr-dib fr-fil"></p>
+        <p>Make sure you set your maximum refresh rate of your display in the Video settings</p>
 
-</code></pre>
+        <p><br></p>
 
-	<p>
-		<br>
-	</p>
-<footer>
-<div class="footer">
-	<div class="row">
-	<a href="https://github.com/The-Smackers/PC-Optimizations"><i class="fa fa-github"></i></a>
-	<a href="https://steamcommunity.com"><i class="fa fa-steam"></i></a>
-	<a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
-	<a href="https://x.com"><i class="fa fa-twitter"></i></a>
-	</div>
+        <h2 id="cs2settings">Counter-Strike 2 Best Advanced Video Options</h2>
 
-	<div class="row">
-	<ul>
-	<li><a href="#">Contact us</a></li>
-	<li><a href="#">Discord</a></li>
-	<li><a href="#">Steam Giveaways</a></li>
-	<li><a href="#">Leetify Stats</a></li>
-	<li><a href="#">Application</a></li>
-	</ul>
-	</div>
+        <p>These are the settings I use</p>
+        <pre>
+        <b>Boost Player Contrast: Enabled</b>            - Enable for best visibility (contrast on enemies)
+        <b>Wait for Vertical Sync: Disabled</b>          - Always disable vsync
+        <b>Multisampling Anti-Aliasing Mode: 2X MSAA</b> - Lower equals best performance/personal preference
+        <b>Global Shadow Quality: High</b>               - High at least for best visibility (shadows on enemies)
+        <b>Model/Texture Detail: High</b>                - Lower equals best performance/personal preference
+        <b>Texture Filtering Mode: Bilinear</b>          - Lower equals best performance/personal preference
+        <b>Shader Detail: High</b>                       - Lower equals best performance/personal preference
+        <b>Particle Detail: Low</b>                      -
+        <b>Ambient Occlusion: Medium</b>                 - Medium at least for best visibility (shadows on enemies)
+        <b>High Dynamic Range: Performance</b>           -
+        <b>FidelityFX Super Resolution: Disabled(Highest Quality)</b>
+        <b>NVIDIA Reflex Low Latency: Enabled</b>        - See section right below (Enabled = less FPS+improved latency)
+        </pre>
 
-	<div class="row">
-	The Smackers © 2023
-	</div>
-	</div>
-</footer>
+        <p><br></p>
 
-</div>
+        <h3>Counter-Strike 2 NVIDIA Low Latency</h3>
+
+        <p>Here's a real good thread about <a rel="noopener noreferrer" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3039023209">NVIDIA Low Latency</a>
+        <p>There's a section called <b>How to Measure Latency</b> which can be used to figure out exactly if you should set this setting to Enabled, Enabled+Boost or Off.</p>
+
+        <p>Most players just set it to Enabled, if you have a consistent 300+ fps in the game you can probably set it to Off</p>
+
+        <p><br></p>
+
+        <h2 id="autoexec">Creating a Counter-Strike 2 autoexec.cfg file</h2>
+
+        <h3>What is an autoexec.cfg?</h3>
+
+        <p>An <a rel="noopener noreferrer" target="_blank" href="https://prosettings.net/blog/how-to-use-a-csgo-config-create-an-autoexec/">autoexec</a> is basically a personal config file that you put in the game's files with your own personal settings (such as crosshair settings, buy binds, sensitivity, and so on)<br>
+        so that the game automatically loads these settings each time you start up the game.</p>
+
+        <h3>Let's create an autoexec.cfg</h3>
+
+        <p>In Windows search bar type: <code>folder options</code> and then hit <strong>Enter</strong>, click the View tab and then uncheck <strong>Hide extensions for known file types</strong>, click Apply and OK</p>
+
+        <p><img src="img/folder1.png" style="width: 1015px;" class="fr-fic fr-dib fr-fil"></p>
+
+        <p>Now open Windows explorer (a folder) and browse to: <strong>C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg</strong></p>
+
+        <p>Right click and empty space in the folder and create a New -&gt; Text Document, rename it to <strong>autoexec.cfg</strong></p>
+
+        <p>Now open it with Notepad and put these lines: (this creates a config with a jump throw bound to the "n" key and which you may add anything you wish later)</p>
+        <pre><code>
+        // start
+
+        // enable the console
+        con_enable 1
+
+        // jump throw grenades bind
+        bind "n" +ju; +ja; +jum
+        alias +ju +jump
+        alias +ja -attack; -attack2
+        alias +jum -jump
+
+        // end
+        host_writeconfig
+
+        </code></pre>
+
+        <p>Ctrl+S to Save file, tnen Ctrl+W to Close Notepad</p>
+
+        <p><br></p>
+
+        <h2 id="desubtick">Add Counter-Strike 2 desubticked binds for autoexec.cfg file</h2>
+
+        <p>Desubticked movement binds make movement feel more consistent and more like CS:GO, <a rel="noopener noreferrer" target="_blank" href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/">This link from Reddit</a> is where the desubtick binds come from</p>
+        <p>Open your autoexec.cfg file with Notepad and put these lines anywhere above the line that says 'host_writeconfig' on it <br>
+        and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><p>Test it out on an empty server before playing a game to make sure everything works</p>
+        <pre>
+        <code>
+        // default movement binds
+        // bind w +forward
+        // bind a +left
+        // bind d +right
+        // bind s +back
+        // bind CTRL +duck
+        // bind MWHEELDOWN +jump
+        // bind SPACE +jump
+
+        // de-subticked movement binds
+
+        bind w +forward_
+        bind a +left_
+        bind s +back_
+        bind d +right_
+        alias +forward_ +forward;+forward
+        alias -forward_ -forward;-forward;-forward
+        alias +left_ +left;+left
+        alias -left_ -left;-left;-left
+        alias +back_ +back;+back
+        alias -back_ -back;-back;-back
+        alias +right_ +right;+right
+        alias -right_ -right;-right;-right
+
+        // de-subticked crouch binds
+
+        bind CTRL +duck_
+        alias +duck_ +duck;+duck
+        alias -duck_ -duck;-duck;-duck
+
+        // de-subticked jump binds
+
+        bind MWHEELDOWN jomp
+        alias +jump_ +jump;+jump
+        alias -jump_ -jump;-jump;-jump
+        alias jomp +jump_;-jump_
+
+        </code>
+        </pre>
+
+        <p><br></p>
+
+        <footer>
+            <div class="footer">
+                <div class="row">
+                <a href="https://github.com/The-Smackers/PC-Optimizations"><i class="fa fa-github"></i></a>
+                <a href="https://steamcommunity.com"><i class="fa fa-steam"></i></a>
+                <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                <a href="https://x.com"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="row">
+                  <ul>
+                  <li><a href="moo@riseup.net">Contact us</a></li>
+                  <li><a href="#">Discord</a></li>
+                  <li><a href="#">Steam Giveaways</a></li>
+                  <li><a href="#">Leetify Stats</a></li>
+                  <li><a href="#">Application</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                    The Smackers © 2023
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script>
         function darkMode() {
