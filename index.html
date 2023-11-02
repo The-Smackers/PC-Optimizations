@@ -270,7 +270,7 @@
 
 <ol>
 	<li>Install and update Windows 11</li>
-	<li id="isPasted">Now Make sure Game Mode is enabled</li>
+	<li>Now Make sure Game Mode is enabled</li>
 	<li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a><p><img class="fr-fic fr-dib fr-fil" style="width: 532px;" src="img/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 695px;" src="img/gpu2.png"></p></li>
 	<li>Now Check Nvidia control panel, click <strong>Manage 3d Settings</strong>, ensure that <strong>Preferred refresh rate</strong> is set to <strong>Highest available</strong> and <strong>Power management mode</strong> is set to <strong>Prefer maximum performance</strong> and click Apply
 	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/nvidia.png"></p></li>
@@ -354,7 +354,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 <p><img src="img/2.png" style="width: 634px;" class="fr-fic fr-dib fr-fil"></p>
 
 <ul>
-	<li id="isPasted">Select your device type and choose NVIDIA or AMD GPU from the dropdown</li>
+	<li>Select your device type and choose NVIDIA or AMD GPU from the dropdown</li>
 	<li>Click Clean and restart</li>
 	<li>Your PC will restart after a couple of minutes be patient</li>
 </ul>
@@ -395,7 +395,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 
 <h3>1. Open Windows explorer (a folder) then highlight the text in address bar and delete it, then paste/type there:</h3>
 
-<p><strong>C:\Windows\Temp</strong></p>
+<p><code>C:\Windows\Temp</code></p>
 
 <p>and hit <strong>Enter</strong><strong><p><img src="img/folder.png" style="width: 929px;" class="fr-fic fr-dib fr-fil"></p></strong>Click okay if asked for Admin privileges</p>
 
@@ -411,11 +411,11 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 	<br>
 </p>
 
-<h3>2. Open Windows explorer (a folder) again then highlight the text in address bar and delete it, then paste/type there:</p>
+<h3>2. Open Windows explorer (a folder) again then highlight the text in address bar and delete it, then paste/type there:</h3>
 
-<p><strong>%temp%</strong></h3>
+<p><code>%temp%</code></p>
 
-<p>and hit <strong id="isPasted">Enter</strong></p>
+<p>and hit <strong>Enter</strong></p>
 
 <p>Select all the files in the folder by pressing CTRL+A on your keyboard after selecting a random file</p>
 
@@ -431,7 +431,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 
 <h3>3. Disk cleanup</h3>
 
-<p>Click the search icon on task bar and type <strong>cleanmgr&nbsp;</strong>and hit <strong>Enter</strong></p>
+<p>Click the search icon on task bar and type <code>cleanmgr</code> and hit <strong>Enter</strong></p>
 
 <p>Select C drive and press <strong>OK</strong></p>
 
@@ -441,7 +441,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 
 <h3>4. Clean up system files</h3>
 
-<p>Click the search icon on task bar and type <strong id="isPasted">cleanmgr&nbsp;</strong>and hit <strong>Enter</strong></p>
+<p>Click the search icon on task bar and type <code>cleanmgr</code> and hit <strong>Enter</strong></p>
 
 <p>Click Clean up system files</p>
 
@@ -482,7 +482,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 
 <h2 id="rbar">Enable Resizable BAR for NVIDIA 2000/3000/4000 Series GPU</h2>
 
-<h3 id="isPasted">If your system has these components or anything newer rBAR should be supported (google your cpu, motherboard and gpu to see if supported)</h3>
+<h3>If your system has these components or anything newer rBAR should be supported (google your cpu, motherboard and gpu to see if supported)</h3>
 
 <ul style="list-style-type: square;">
 	<li>Intel CPU: 10th, 11th, 12th, 13th series and newer</li>
@@ -555,7 +555,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 <h3 id="rbarnv">You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
 
 <ul>
-	<li id="isPasted">Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" target="_blank" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
+	<li>Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" target="_blank" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
 	<li>Open nvidiaProfileInspector and scroll down to section <strong>5 - Common</strong> and change the 3 rBAR options like the image below</li>
 </ul>
 
@@ -573,7 +573,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 <h2 id="rbaramd">Enable Resizable BAR/Smart Access Memory for AMD Series GPU</h2>
 
 <ul>
-	<li id="isPasted">step 4</li>
+	<li>step 4</li>
 	<li>step 2</li>
 	<li>step 0</li>
 </ul>
@@ -630,7 +630,7 @@ This is normally done through the BIOS utility, refer to your motherboard docume
 	so that the game automatically loads these settings each time you start up the game.</p>
 
     <h3>Let's create an autoexec.cfg</h3>
-	<p>In Windows search bar type: <strong>folder options</strong> and then hit <strong>Enter</strong>, click the View tab and then uncheck <strong>Hide extensions for known file types</strong>, click Apply and OK</p>
+	<p>In Windows search bar type: <code>folder options</code> and then hit <strong>Enter</strong>, click the View tab and then uncheck <strong>Hide extensions for known file types</strong>, click Apply and OK</p>
 
 	<p><img src="img/folder1.png" style="width: 1015px;" class="fr-fic fr-dib fr-fil"></p>
 
