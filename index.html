@@ -17,13 +17,13 @@
             background-color: #202020;
             color: white;
             font-size: 20px;
-			
+
         }
 		title {
 			background-color: #2b2b2b;
             color: white;
 		}
-		
+
 		.banner {
 			background-image: url(img/logo.png);
 			height: 548px;
@@ -183,7 +183,7 @@
 		}
 		code{
 			color: whitesmoke;
-			background-color: black;  
+			background-color: black;
 		}
 
 		pre{
@@ -193,11 +193,11 @@
 			width: 100%;
 			max-height: 1200px;
 			display: inline-block;
-			overflow: auto;  
+			overflow: auto;
 		}
     </style>
 </head>
- 
+
 <body>
 
 <!-- The sidebar -->
@@ -207,6 +207,7 @@
   <a href="#prep">Windows 11 Preparation</a>
   <a href="#check">Windows 11 Checklist</a>
   <a href="#optimize">Windows 11 Optimize</a>
+  <a href="#xmp">XMP Profiles</a>
   <a href="#clean">Clean GPU Drivers</a>
   <a href="#nvidia">Install NVIDIA GPU <br>Drivers</a>
   <a href="#amd">Install AMD GPU <br>Drivers</a>
@@ -233,14 +234,14 @@
   <div>
     <h1 id="home">PC and Counter-Strike 2 Optimization Guide</h1>
     <h4>Get more frames today!</h4>
-  </div>  
+  </div>
 </div>
 
 
     <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
     <button onclick="darkMode()">Darkmode</button>
     <button onclick="lightMode()">LightMode</button>
-	
+
 <p>This guide is created and assembled by The Smackers for playing Counter-Strike 2, follow this guide at your own risk.</p>
 <p>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</p>
 
@@ -271,7 +272,7 @@
 	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/nvidia.png"></p></li>
 	<li>Now Click Windows Search Icon and type <strong>control panel</strong>, hit <strong>Enter</strong>, click <strong>Power Options</strong> if you&#39;re on a Desktop PC change power plan to either <strong>High Performance</strong> or <a target="_blank" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a>
 	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/power.png"></p></li>
-	
+
 </ol>
 
 <p>
@@ -283,33 +284,60 @@
 <ol>
 	<li>Open Task Manager, click Startup apps and set all apps to disabled unless actually want them starting with Windows</li>
 	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/startup.png"></p>
-	
-	
+
+
 	<li>Open Task Manager, click Processes, compare to this image of how yours should look after</li>
 	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/processes.png"></p>
-	
+
 	<li>Open Windows Settings, click Gaming -> Xbox Game Bar and turn it Off</li>
 
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/gamebar.png"></p>	
+	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/gamebar.png"></p>
 
-	
+
 	<li>Open Windows Settings, click Apps -> Installed apps
 
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app1.png"></p>	
+	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app1.png"></p>
 
 	<li>Now click the ellipsis (3 dots) on each Microsoft Corporation app that is not named "Runtime" and select <b>Advanced options</b>
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/ellipsis.png"></p>	
+	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/ellipsis.png"></p>
 	<li>Now click the dropdown for <b>Let this app run in background</b> and change to Never. Do this for all Microsoft Corporation apps except for Windows Security</li>
 	</li>
-	
-	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app2.png"></p>
-	
-	<li>Restart Windows to complete</li>
 
+	<p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" src="img/settings_app2.png"></p>
+
+	<li>Restart Windows to complete</li>
+</ol>
 <p>
 	<br>
 </p>
 
+<h2 id="xmp">What is an XMP profile?</h2>
+
+<p>XMP or Extreme Memory Profiles, is an Intel technology that allows you to change multiple memory settings by simply selecting a different profile, taking advantage of higher than standard memory speeds<br>
+If you’ve ever wanted to overclock your memory but didn’t want to fiddle with frequency, voltage and timings, this is the way to do it</p>
+<p>
+	<br>
+</p>
+<h3>Should I use an XMP profile?</h3>
+In short, yes. All high-performance RAM use XMP profiles, because they all run above standard DDR industry specifications<br>
+If you don't enable XMP in your BIOS, they will run at your system's standard specifications that are dependent on the CPU you have and you won't take advantage of the higher clock speeds that your RAM may have
+<p>
+	<br>
+</p>
+<h3>Check if XMP profile is already enabled?</h3>
+
+<p>Type <b>CMD</b> into the Windows Search Bar, hit <b>Enter</b> and then type:</p>
+<code>wmic memorychip get speed</code>
+<p>
+	<br>
+</p>
+<h3>How to enable the XMP profile?</h3>
+
+This is normally done through the BIOS utility, refer to your motherboard documentation for specifics<br>
+<a href="https://www.gskill.com/community/1584933243/1646893264/How-to-Enable-XMP-EXPO-for-DDR4-DDR5#how-to-enable-xmp-expo" target="_blank" rel="noopener noreferrer">This link from GSKILL</a> is a great reference guide for most motherboards
+<p>
+	<br>
+</p>
 <h2 id="clean">How to Install/Update NVIDIA GPU Drivers Correctly</h2>
 
 <h3>Display Driver Uninstaller Setup (to cleanup any currently installed drivers)</h3>
@@ -436,7 +464,7 @@
 <h2>
 	<br>
 </h2>
-	
+
 <h2 id="stutter">Easy Fix for PC Stuttering in games (GameBar Presence Writer)</h2>
 
 <ul>
@@ -447,7 +475,7 @@
 <p>
 	<br>
 </p>
-	
+
 <h2 id="rbar">Enable Resizable BAR for NVIDIA 2000/3000/4000 Series GPU</h2>
 
 <h3 id="isPasted">If your system has these components or anything newer rBAR should be supported (google your cpu, motherboard and gpu to see if supported)</h3>
@@ -569,13 +597,13 @@
 <b>Boost Player Contrast: Enabled</b>            - Enable for best visibility (contrast on enemies)
 <b>Wait for Vertical Sync: Disabled</b>          - Always disable vsync
 <b>Multisampling Anti-Aliasing Mode: 2X MSAA</b> - Lower equals best performance/personal preference
-<b>Global Shadow Quality: High</b>               - High at least for best visibility (shadows on enemies) 
+<b>Global Shadow Quality: High</b>               - High at least for best visibility (shadows on enemies)
 <b>Model/Texture Detail: High</b>                - Lower equals best performance/personal preference
 <b>Texture Filtering Mode: Bilinear</b>          - Lower equals best performance/personal preference
 <b>Shader Detail: High</b>                       - Lower equals best performance/personal preference
 <b>Particle Detail: Low</b>                      -
 <b>Ambient Occlusion: Medium</b>                 - Medium at least for best visibility (shadows on enemies)
-<b>High Dynamic Range: Performance</b>           - 
+<b>High Dynamic Range: Performance</b>           -
 <b>FidelityFX Super Resolution: Disabled(Highest Quality)</b>
 <b>NVIDIA Reflex Low Latency: Enabled</b>        - See section right below (Enabled = less FPS+improved latency)
 </pre>
@@ -585,16 +613,16 @@
 <h3>Counter-Strike 2 NVIDIA Low Latency</h3>
 	<p>Here's a real good thread about <a rel="noopener noreferrer" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3039023209">NVIDIA Low Latency</a>
 	<p>There's a section called <b>How to Measure Latency</b> which can be used to figure out exactly if you should set this setting to Enabled, Enabled+Boost or Off.</p>
-	
+
 	<p>Most players just set it to Enabled, if you have a consistent 300+ fps in the game you can probably set it to Off</p>
 <p>
 	<br>
 </p>
 
 	<h2 id="autoexec">Creating a Counter-Strike 2 autoexec.cfg file</h2>
-	
+
 	<h3>What is an autoexec.cfg?</h3>
-	<p>An <a rel="noopener noreferrer" target="_blank" href="https://prosettings.net/blog/how-to-use-a-csgo-config-create-an-autoexec/">autoexec</a> is basically a personal config file that you put in the game's files with your own personal settings (such as crosshair settings, buy binds, sensitivity, and so on)<br> 
+	<p>An <a rel="noopener noreferrer" target="_blank" href="https://prosettings.net/blog/how-to-use-a-csgo-config-create-an-autoexec/">autoexec</a> is basically a personal config file that you put in the game's files with your own personal settings (such as crosshair settings, buy binds, sensitivity, and so on)<br>
 	so that the game automatically loads these settings each time you start up the game.</p>
 
     <h3>Let's create an autoexec.cfg</h3>
@@ -699,7 +727,7 @@ alias jomp +jump_;-jump_
 	</div>
 
 	<div class="row">
-	The Smackers © 2023 
+	The Smackers © 2023
 	</div>
 	</div>
 </footer>
@@ -720,5 +748,8 @@ alias jomp +jump_;-jump_
             content.innerText = "Dark Mode for this page is OFF";
         }
     </script>
+
+	<span style="margin: 0px auto; position: absolute; z-index: 2147483647; visibility: hidden; left: 1702px; width: 3px; top: 769px; height: 2px; border: 2px dotted rgb(218, 112, 214);"></span><span style="z-index: 2147483647; position: absolute; visibility: hidden; left: 1690px; width: 50px; top: 754px; height: 20px; font-size: 10px; color: black;"></span>
+
 </body>
 </html>
