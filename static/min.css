@@ -1,7 +1,8 @@
 body {
     background-color: #202020;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 title {
@@ -19,16 +20,15 @@ title {
     padding-left: 8px;
 }
 h1 {
-    font-size: 40px;
+    font-size: 30px;
 }
 h2 {
-    font-size: 30px;
+    font-size: 26px;
 }
 h3 {
     font-size: 20px;
 }
 p {
-    font-size: 20px;
 }
 a:link {
     color: #9966cc;
@@ -104,6 +104,7 @@ a:active {
 }
 /* The side navigation menu */
 .sidebar {
+    font-family: "Segoe UI";
     font-size: 18px;
     margin: 0;
     margin-top: 26px;
@@ -160,6 +161,7 @@ div.content {
     }
 }
 code{
+    font-family: monaco,Consolas,Lucida Console,monospace;
     color: whitesmoke;
     background-color: black;
 }
