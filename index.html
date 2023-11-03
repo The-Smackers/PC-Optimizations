@@ -423,10 +423,10 @@
         con_enable 1
 
         // jump throw grenades bind
-        bind "n" +ju; +ja; +jum
-        alias +ju +jump
-        alias +ja -attack; -attack2
-        alias +jum -jump
+        alias "+jumpaction" "+jump;"
+        alias "+throwaction" "-attack; -attack2"
+        alias "-jumpaction" "-jump"
+        bind SPACE "+jumpaction;+throwaction;"
 
         // end
         host_writeconfig
