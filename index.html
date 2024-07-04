@@ -26,6 +26,7 @@
         <a href="#xmp">XMP Profiles</a>
         <a href="#clean">Clean GPU Drivers</a>
         <a href="#nvidia">Install NVIDIA GPU <br>Drivers</a>
+        <a href="#nvcp">Tweak NVIDIA <br>Control Panel</a>
         <a href="#amd">Install AMD GPU <br>Drivers</a>
         <a href="#tempfiles">Windows Cleaning</a>
         <a href="#faceit">Windows 11 and Faceit AC</a>
@@ -38,7 +39,6 @@
         <a href="#cs2optimize">Counter-Strike 2 <br>Optimizations</a>
         <a href="#cs2settings">Counter-Strike 2 <br>Settings</a>
         <a href="#autoexec">Counter-Strike 2 <br>autoexec file</a>
-        <a href="#desubtick">Counter-Strike 2 <br>desubtick binds</a>
         <p><br></p>
     </div>
 
@@ -175,6 +175,31 @@
         </ul>
 
         <p><img alt="" src="static/3.png" style="width: 374px;" class="fr-fic fr-dib fr-fil"><img alt="" src="static/4.png" style="width: 374px;" class="fr-fic fr-dib"><img alt="" src="static/5.png" style="width: 374px;" class="fr-fic fr-dib"><img alt="" src="static/6.png" style="width: 374px;" class="fr-fic fr-dib"></p>
+
+        <p><br></p>
+
+        <h2 id="nvcp">Tweaking NVIDIA Control Panel</h2>
+        <h3>Right click <strong>Desktop</strong> and select <strong>NVIDIA Control Panel </strong></h3>
+        <ul>
+            <li>Change resolution, select prefered resolution and highest available refresh rate<p><img alt="" src="static/resolution.png" style="width: 374px;" class="fr-fic fr-dib fr-fil"></p></li>
+            <li>Manage 3D settings, select <strong>Highest available</strong> refresh rate and Power management mode to <strong>prefer maximum performance</strong><p><img alt="" src="static/3d.png" style="width: 374px;" class="fr-fic fr-dib fr-fil"></p></li>
+            <li>Adjust dekstop size and position, Aspect ratio if play <strong>Black Bars</strong><strong>, Full-screen if play <strong>Stretched<strong/>, No scaling if play <strong>Native</strong><p><img alt="" src="static/scaling.png" style="width: 374px;" class="fr-fic fr-dib fr-fil"></p></li>
+        </ul>
+
+        <p><br></p>
+
+        <h2 id="rbar">Enable Resizable BAR for NVIDIA 2000/3000/4000 Series GPU</h2>
+
+        <h3>If your system has these components or anything newer rBAR should be supported (google your cpu, motherboard and gpu to see if supported)</h3>
+
+        <ul style="list-style-type: square;">
+            <li>Intel CPU: 10th, 11th, 12th, 13th series and newer</li>
+            <li>AMD CPU: AMD Motherboard: 300 series(bios update), 400, 500, 600 series and newer</li>
+            <li>NVIDIA RTX 3000 series or newer</li>
+            <li>AMD Radeon RX 5000 series or newer with unofficial patch: RX 500 series/Vega56,64/Radeon VII</li>
+        </ul>
+
+        <p>You should have a relatively up to date BIOS, back up your data as per usual</p>
 
         <p><br></p>
 
@@ -389,9 +414,9 @@
 
         <p><br></p>
 
-        <h3>Counter-Strike 2 NVIDIA Low Latency</h3>
+        <h3>Counter-Strike 2 NVIDIA Reflex</h3>
 
-        <p>Here's a real good thread about <a rel="noopener noreferrer" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3039023209">NVIDIA Low Latency</a>
+        <p>Here's a real good thread about <a rel="noopener noreferrer" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3039023209">NVIDIA Reflex</a>
         <p>There's a section called <b>How to Measure Latency</b> which can be used to figure out exactly if you should set this setting to Enabled, Enabled+Boost or Off.</p>
 
         <p>Most players just set it to Enabled</p>
@@ -442,55 +467,6 @@
 
         <p><br></p>
 
-        <h2 id="desubtick">Add Counter-Strike 2 desubticked binds for autoexec.cfg file</h2>
-
-        <p>Desubticked movement binds make movement feel more consistent and more like CS:GO, <a rel="noopener noreferrer" target="_blank" href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/">This link from Reddit</a> is where the desubtick binds come from</p>
-        <p>Open your autoexec.cfg file with Notepad and put these lines anywhere above the line that says 'host_writeconfig' on it <br>
-        and then Save file and start game: (If you don&#39;t use mouse wheel down for jump, you must change it to the key you use)</p><p>Test it out on an empty server before playing a game to make sure everything works</p>
-        <pre>
-        <code>
-        // default movement binds
-        // bind w +forward
-        // bind a +left
-        // bind d +right
-        // bind s +back
-        // bind CTRL +duck
-        // bind MWHEELDOWN +jump
-        // bind SPACE +jump
-
-        // de-subticked movement binds
-
-        bind w +forward_
-        bind a +left_
-        bind s +back_
-        bind d +right_
-        alias +forward_ +forward;+forward
-        alias -forward_ -forward;-forward;-forward
-        alias +left_ +left;+left
-        alias -left_ -left;-left;-left
-        alias +back_ +back;+back
-        alias -back_ -back;-back;-back
-        alias +right_ +right;+right
-        alias -right_ -right;-right;-right
-
-        // de-subticked crouch binds
-
-        bind CTRL +duck_
-        alias +duck_ +duck;+duck
-        alias -duck_ -duck;-duck;-duck
-
-        // de-subticked jump binds
-
-        bind MWHEELDOWN jomp
-        alias +jump_ +jump;+jump
-        alias -jump_ -jump;-jump;-jump
-        alias jomp +jump_;-jump_
-
-        </code>
-        </pre>
-
-        <p><br></p>
-
         <footer>
             <div class="footer">
                 <div class="row">
@@ -509,7 +485,7 @@
                   </ul>
                 </div>
                 <div class="row">
-                    The Smackers &copy; 2023
+                    The Smackers &copy; 2024
                 </div>
             </div>
         </footer>
