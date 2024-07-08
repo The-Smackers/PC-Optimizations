@@ -30,6 +30,24 @@ h3 {
 }
 p {
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #9966cc;
+    color: #ffffff;
+}
+.section-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
 a:link {
     color: #9966cc;
     background-color: transparent;
