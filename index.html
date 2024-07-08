@@ -39,6 +39,7 @@
         <a href="#cs2optimize">Counter-Strike 2 <br>Optimizations</a>
         <a href="#cs2settings">Counter-Strike 2 <br>Settings</a>
         <a href="#autoexec">Counter-Strike 2 <br>autoexec file</a>
+        <a href="#benchmarks">Counter-Strike 2 <br>benchmarks</a>
         <p><br></p>
     </div>
 
@@ -61,7 +62,7 @@
         <h2 id="prep">Windows 11 Preparation</h2>
 
         <p>Nothing special/different in Windows 11 so same practices before still apply like the below tips. A clean install is always better than updating to Windows 11</p>
-        <p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and ucreate a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
+        <p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and create a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
 
         <ul>
             <li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
@@ -77,7 +78,7 @@
 
         <ol>
             <li>Install and update Windows 11</li>
-            <li>Now Make sure Game Mode is enabled</li>
+            <li>Now Make sure Game Mode is disabled</li>
             <li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a>
               <p><img class="fr-fic fr-dib fr-fil" style="width: 532px;" alt="" src="static/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 695px;" alt="" src="static/gpu2.png"></p></li>
             <li>In Windows Search Bar type <code>control panel</code> hit <strong>Enter</strong>, click <strong>Power Options</strong><br/>if you're on a Desktop PC running Intel change power plan to either <strong>High Performance</strong> or <a target="_blank" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a><br/>if running AMD x3D chip best to leave it on Balanced
@@ -467,6 +468,225 @@
         <p><strong>Ctrl+S</strong> to Save file, then <strong>Ctrl+W</strong> to Close Notepad</p>
 
          <p>// End</p>
+
+
+    <h2 id="benchmarks">Counter Strike 2 Benchmark Results</h2>
+        <p>Borderless Windowed versus Fullscreen mode: made no difference in fps, frametime or latency.</p>
+        <p>fps_max 1000 versus fps_max 0: made no difference in fps, frametime or latency.</p>
+
+    <h2 class="section-title">1920x1080</h2>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FPS</td>
+            <td>Avg=677.6, P1=283.3</td>
+        </tr>
+        <tr>
+            <td>PC Latency</td>
+            <td>4.0</td>
+        </tr>
+        <tr>
+            <td>FrameTime</td>
+            <td>Avg=1.48, P99=3.53</td>
+        </tr>
+    </table>
+
+    <h2 class="section-title">1440x1080</h2>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FPS</td>
+            <td>Avg=736.3, P1=282.3</td>
+        </tr>
+        <tr>
+            <td>PC Latency</td>
+            <td>4.0</td>
+        </tr>
+        <tr>
+            <td>FrameTime</td>
+            <td>Avg=1.36, P99=3.64</td>
+        </tr>
+    </table>
+
+    <h2 class="section-title">1280x960</h2>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FPS</td>
+            <td>Avg=743.4, P1=280.8</td>
+        </tr>
+        <tr>
+            <td>PC Latency</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td>FrameTime</td>
+            <td>Avg=1.35, P99=3.56</td>
+        </tr>
+    </table>
+
+    <h2 class="section-title">1024x768</h2>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FPS</td>
+            <td>Avg=764.9, P1=297.2</td>
+        </tr>
+        <tr>
+            <td>PC Latency</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td>FrameTime</td>
+            <td>Avg=1.31, P99=3.36</td>
+        </tr>
+    </table>
+
+    <h2 class="section-title">CPU Affinity: Disable CPU 0</h2>
+    <p>In the task manager, click the "Details" tab and right click on the game, then select "set affinity". In the Processor affinity window, uncheck CPU 0 and leave all other numbers checked.</p>
+    <h3 class="section-title">1440x1080</h3>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FPS</td>
+            <td>Avg=763.2, P1=293.7</td>
+        </tr>
+        <tr>
+            <td>PC Latency</td>
+            <td>4.0</td>
+        </tr>
+        <tr>
+            <td>FrameTime</td>
+            <td>Avg=1.31, P99=3.41</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">1024x768</h3>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FPS</td>
+            <td>Avg=782.7, P1=316.5</td>
+        </tr>
+        <tr>
+            <td>PC Latency</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td>FrameTime</td>
+            <td>Avg=1.28, P99=3.16</td>
+        </tr>
+    </table>
+
+    <h2 class="section-title">CPU Affinity: Disable CPU 0, Medal program running</h2>
+    <h3 class="section-title">1440x1080</h3>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FPS</td>
+            <td>Avg=727.9, P1=295.9</td>
+        </tr>
+        <tr>
+            <td>PC Latency</td>
+            <td>4.0</td>
+        </tr>
+        <tr>
+            <td>FrameTime</td>
+            <td>Avg=1.37, P99=3.38</td>
+        </tr>
+    </table>
+
+    <h2 class="section-title">Tools used:</h2>
+    <ul>
+        <li>
+            <a href="https://steamcommunity.com/workshop/filedetails/?id=3240880604" target="_blank">CS2 FPS BENCHMARK workshop map</a>
+        </li>
+        <li>
+            <a href="https://www.nvidia.com/en-us/geforce/technologies/frameview" target="_blank">PC Latency test using NVIDIA FrameView</a>
+        </li>
+        <li>
+            <a href="https://www.reddit.com/r/GlobalOffensive/comments/1ay9uzx/can_i_get_a_explanation_for_these_3_stats_in" target="_blank">FrameTime explanation</a>
+        </li>
+    </ul>
+
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/NE0qg_8k0BE" frameborder="0" allowfullscreen></iframe>
+
+ <h1>PC Specifications</h1>
+
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Manufacturer</td>
+            <td>Micro-Star International Co., Ltd.</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>MS-7D75</td>
+        </tr>
+        <tr>
+            <td>CPU Brand</td>
+            <td>AMD Ryzen 7 7800X3D 8-Core Processor</td>
+        </tr>
+        <tr>
+            <td>Operating System Version</td>
+            <td>Windows 11 (64 bit)</td>
+        </tr>
+        <tr>
+            <td>Monitor Refresh Rate</td>
+            <td>240 Hz</td>
+        </tr>
+        <tr>
+            <td>Monitor Refresh Rate</td>
+            <td>60 Hz</td>
+        </tr>
+        <tr>
+            <td>DirectX Card</td>
+            <td>NVIDIA GeForce RTX 4080 SUPER</td>
+        </tr>
+        <tr>
+            <td>Number of Monitors</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Primary Display Resolution</td>
+            <td>1440 x 1080</td>
+        </tr>
+        <tr>
+            <td>Desktop Resolution</td>
+            <td>3840 x 2160</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>31904 Mb</td>
+        </tr>
+    </table>
+
+
+     <p>// End</p>
 
         <footer>
             <div class="footer">
