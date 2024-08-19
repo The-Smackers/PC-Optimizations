@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>
+          Security Tips
+    </title>
+    <link href="static/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/min.css">
+</head>
+
+<body>
+
+    <!-- The sidebar -->
+    <div class="sidebar">
+        <a class="active" href="">Home</a>
+        <a href="#prep">Windows 11 Preparation</a>
+        <a href="#check">Windows 11 Checklist</a>
+        <a href="#optimize">Windows 11 Optimize</a>
+        <a href="#xmp">XMP Profiles</a>
+        <a href="#clean">Clean GPU Drivers</a>
+        <a href="#nvidia">Install NVIDIA GPU <br>Drivers</a>
+        <a href="#nvcp">Tweak NVIDIA <br>Control Panel</a>
+        <a href="#amd">Install AMD GPU <br>Drivers</a>
+        <a href="#tempfiles">Windows Cleaning</a>
+        <a href="#faceit">Windows 11 and Faceit AC</a>
+        <a href="#stutter">Fix Game Stutter</a>
+        <a href="#rbar">What is Resizable BAR</a>
+        <a href="#rbarcheck">Check Resizable BAR Enabled</a>
+        <a href="#rbarbios">Enable Resizable BAR in BIOS</a>
+        <a href="#rbarnv">Enable Resizable BAR for NVIDIA</a>
+        <a href="#rbaramd">Enable Resizable BAR for AMD</a>
+<!--    <a href="#haccel">Disable Hardware Acceleration <br> in Applications</a> -->
+        <a href="#cs2optimize">Counter-Strike 2 <br>Optimizations</a>
+        <a href="#cs2settings">Counter-Strike 2 <br>Settings</a>
+        <a href="#autoexec">Counter-Strike 2 <br>autoexec file</a>
+        <a href="#benchmarks">Counter-Strike 2 <br>Benchmarks</a>
+        <p><br></p>
+    </div>
+
+    <div class="content">
+        <!-- The banner logo -->
+        <div class="banner">
+            <div>
+                <h1 id="home">The Smackers Security Tips</h1>
+                <h2>Don't get scammed today!</h2>
+            </div>
+        </div>
+
+        <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
+        <button onclick="darkMode()">Darkmode</button>
+        <button onclick="lightMode()">LightMode</button>
+
+    <main>
+        <section>
+            <h2>Keeping Email Account Protected</h2>
+            <ol>
+                <li>
+                    The most important password is your email account password:
+                    <ul>
+                        <li>Never use this password for any other website</li>
+                        <li>Make it a complex password (lower/uppercase letters, numbers, special characters)</li>
+                        <li>Don't use your username or any personal info in your password</li>
+                        <li>Change it every now and then</li>
+                    </ul>
+                </li>
+                <p></p>
+                <li>
+                    Besides your Windows login password, this is the only password you should remember OR write down somewhere at home or keep backed up somewhere other than on only one device. This is where Password Managers (mentioned later) come in handy.
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Keeping Steam Skins and Items Safe From Scams</h2>
+            <ol>
+                <li>
+                    Before using any Counter-Strike skin related website first sign into Steam; because if you're already signed into Steam through your web browser no website will ever ask you to fill in your login data or use your Mobile Authenticator.
+                    <br />You will always be able to just click "Sign in" on the Steam prompt, if a website is asking you to log in manually it's a scam website.
+                </li>
+                <p></p>
+                <li>
+                    NEVER use the same password twice, never use the same password that you use for your email on any website or vice versa.
+                </li>
+                    <p></p>
+                <li>ALWAYS use a Password Manager app and/or get your web browser to remember all of your unique passwords for websites.<br />Most recommended one is: <a href="https://bitwarden.com" target="_blank">Bitwarden</a>
+                </li>
+                <p></p>
+                <li>
+                    Unless you're at work, using a work computer or using a laptop that could possibly get stolen NEVER type your passwords in order to login to websites. Your web browser should save your login information so that when you click on the login prompt it will show that there is login information saved for that website and by that happening that shows that the website is genuine.
+                </li>
+                <p></p>
+                <li>
+                    NEVER click or copy any links in unsolicited emails or from strangers in messages.
+                    <br />If you're curious about where an email originated from check out this link: <a href="https://proton.me/blog/can-emails-be-traced" target="_blank">Proton Blog</a>
+                </li>
+
+<!--                 <li>
+                    If available as an option use passkeys instead of passwords. However, widespread passkey adoption will take time, so experts recommend keeping your password manager and using it to store passkeys, too. Many of the password managers allow its users to store passkeys in their password manager vault.
+                    <p>Passkeys information: <a href="https://passkeys.directory" target="_blank">Passkeys Directory</a></p>
+                </li> -->
+            </ol>
+        </section>
+
+        <section>
+            <h2>Optional Tips</h2>
+            <ol>
+
+                <li>If available for your email and/or websites as an option use 2FA.
+                    <p>Two-Factor Authentication information: <a href="https://www.microsoft.com/en-ca/security/business/security-101/what-is-two-factor-authentication-2fa" target="_blank">What is two-factor authentication</a></p>
+                </li>
+                <li>
+                    If available as an option use passkeys instead of passwords. However, widespread passkey adoption will take time, so experts recommend keeping your password manager and using it to store passkeys, too. Many of the password managers allow its users to store passkeys in their password manager vault.
+                    <p>Passkeys information: <a href="https://passkeys.directory" target="_blank">Passkeys Directory</a></p>
+                </li>
+
+            </ol>
+        </section>
+    </main>
+
+        <footer>
+            <div class="footer">
+                <div class="row">
+                <a href="https://github.com/The-Smackers/PC-Optimizations"><i class="fa fa-github"></i></a>
+                <a href="https://steamcommunity.com"><i class="fa fa-steam"></i></a>
+                <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                <a href="https://x.com"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="row">
+                  <ul>
+                  <li><a href="moo@moo">Contact us</a></li>
+                  <li><a href="#">Discord</a></li>
+                  <li><a href="#">Steam Giveaways</a></li>
+                  <li><a href="#">Leetify Stats</a></li>
+                  <li><a href="#">Application</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                    The Smackers &copy; 2024
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function darkMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+            content.innerText = "Dark Mode for this page is ON";
+        }
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "Dark Mode for this page is OFF";
+        }
+    </script>
+</body>
+</html>
