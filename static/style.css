@@ -485,3 +485,136 @@ pre, code {
 .dark-mode .sidebar .menu-item {
     color: #ffffff !important;
 }
+
+/* Security Tips link styling - distinct color to indicate separate page */
+.sidebar .security-tips-link {
+    background: linear-gradient(135deg, #b377e6, #9b5cc7);
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 8px 12px;
+    border-left: 3px solid #b377e6 !important;
+    box-shadow: 0 2px 8px rgba(179, 119, 230, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sidebar .security-tips-link:hover {
+    background: linear-gradient(135deg, #9b5cc7, #834ba8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(179, 119, 230, 0.4);
+    border-left-color: #b377e6 !important;
+}
+
+/* Light mode Security Tips styling */
+.light-mode .sidebar .security-tips-link {
+    background: linear-gradient(135deg, #b377e6, #9b5cc7);
+    border-left-color: #b377e6 !important;
+    box-shadow: 0 2px 8px rgba(179, 119, 230, 0.3);
+}
+
+.light-mode .sidebar .security-tips-link:hover {
+    background: linear-gradient(135deg, #9b5cc7, #834ba8);
+    box-shadow: 0 4px 12px rgba(179, 119, 230, 0.4);
+    border-left-color: #b377e6 !important;
+}
+
+/* Dark mode Security Tips styling */
+.dark-mode .sidebar .security-tips-link {
+    background: linear-gradient(135deg, #b377e6, #9b5cc7);
+    border-left-color: #b377e6 !important;
+    box-shadow: 0 2px 8px rgba(179, 119, 230, 0.3);
+}
+
+.dark-mode .sidebar .security-tips-link:hover {
+    background: linear-gradient(135deg, #9b5cc7, #834ba8);
+    box-shadow: 0 4px 12px rgba(179, 119, 230, 0.4);
+    border-left-color: #b377e6 !important;
+}
+
+/* AWPtimizr link styling - dark background like floating ad with colorized text */
+.sidebar .awptimizr-link {
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 8px 12px;
+    border-left: 3px solid rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.sidebar .awptimizr-link:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-left-color: rgba(0, 0, 0, 1) !important;
+}
+
+/* AWP text - blue color */
+.sidebar .awptimizr-link .awp-text {
+    color: #05addc !important;
+    font-weight: 700;
+}
+
+/* timizr text - orange color */
+.sidebar .awptimizr-link .timizr-text {
+    color: #e67e22 !important;
+    font-weight: 700;
+}
+
+/* BETA text - red color like Security Tips */
+.sidebar .awptimizr-link .beta-text {
+    color: #e74c3c !important;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+/* Light mode AWPtimizr styling - same colors */
+.light-mode .sidebar .awptimizr-link {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-left-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.light-mode .sidebar .awptimizr-link:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-left-color: rgba(0, 0, 0, 1) !important;
+}
+
+.light-mode .sidebar .awptimizr-link .awp-text {
+    color: #05addc !important;
+}
+
+.light-mode .sidebar .awptimizr-link .timizr-text {
+    color: #e67e22 !important;
+}
+
+.light-mode .sidebar .awptimizr-link .beta-text {
+    color: #e74c3c !important;
+}
+
+/* Dark mode AWPtimizr styling - same colors */
+.dark-mode .sidebar .awptimizr-link {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-left-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .sidebar .awptimizr-link:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-left-color: rgba(0, 0, 0, 1) !important;
+}
+
+.dark-mode .sidebar .awptimizr-link .awp-text {
+    color: #05addc !important;
+}
+
+.dark-mode .sidebar .awptimizr-link .timizr-text {
+    color: #e67e22 !important;
+}
+
+.dark-mode .sidebar .awptimizr-link .beta-text {
+    color: #e74c3c !important;
+}
