@@ -120,6 +120,9 @@ a:active {
     background-color: white;
     color: #202020;
 }
+.hlight {
+    color: #9966cc;
+}
 /* The side navigation menu */
 .sidebar {
     font-family: "Segoe UI";

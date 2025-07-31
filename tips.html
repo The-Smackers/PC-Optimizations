@@ -2,61 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <title>
-          Security Tips
-    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Counter-Strike 2 Security Tips - Prevent Scams & Stay Safe | The Smackers</title>
+    <meta name="description" content="Essential security tips for Counter-Strike 2 players. Learn how to protect your Steam account, skins, and items from scams. Expert advice on password security and safe browsing.">
+    <meta name="keywords" content="CS2 security, Counter-Strike 2 scam prevention, Steam account security, CS2 skin protection, gaming security tips, Counter-Strike 2 safety, Steam Guard, Steam trading safety">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Counter-Strike 2 Security Tips - Prevent Scams & Stay Safe">
+    <meta property="og:description" content="Essential security tips for Counter-Strike 2 players. Learn how to protect your Steam account, skins, and items from scams.">
+    <meta property="og:url" content="https://the-smackers.github.io/tips.html">
+    <meta property="og:image" content="https://the-smackers.github.io/static/logo.png">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Counter-Strike 2 Security Tips - Prevent Scams & Stay Safe">
+    <meta name="twitter:description" content="Essential security tips for Counter-Strike 2 players. Learn how to protect your Steam account and items.">
+    <meta name="twitter:image" content="https://the-smackers.github.io/static/logo.png">
+    
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="The Smackers">
+    <link rel="canonical" href="https://the-smackers.github.io/tips.html">
+    
+    <!-- Favicon and Stylesheets -->
     <link href="static/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/min.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 
 <body>
+    <!-- Floating Ad Panel -->
+    <a href="https://github.com/The-Smackers/AWPtimizr" target="_blank" class="floating-ad">
+        <img src="https://github.com/The-Smackers/AWPtimizr/raw/main/logo.png" alt="AWPtimizr">
+    </a>
+
+    <!-- Mobile Navigation Toggle -->
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <!-- The sidebar -->
     <div class="sidebar">
         <a class="active" href="index.html">Home</a>
-        <a href="index.html#prep">Windows 11 Preparation</a>
-        <a href="index.html#check">Windows 11 Checklist</a>
-        <a href="index.html#optimize">Windows 11 Optimize</a>
+        <div class="menu-item">Windows 11</div>
+        <div class="submenu">
+            <a href="index.html#prep">Windows 11 Preparation</a>
+            <a href="index.html#check">Windows 11 Checklist</a>
+            <a href="index.html#optimize">Windows 11 Optimize</a>
+        </div>
         <a href="index.html#xmp">XMP Profiles</a>
-        <a href="index.html#clean">Clean GPU Drivers</a>
-        <a href="index.html#nvidia">Install NVIDIA GPU <br>Drivers</a>
-        <a href="index.html#nvcp">Tweak NVIDIA <br>Control Panel</a>
-        <a href="index.html#amd">Install AMD GPU <br>Drivers</a>
+        <div class="menu-item">GPU Drivers</div>
+        <div class="submenu">
+            <a href="index.html#clean">Clean GPU Drivers</a>
+            <a href="index.html#nvidia">Install NVIDIA GPU Drivers</a>
+            <a href="index.html#nvcp">Tweak NVIDIA Control Panel</a>
+            <a href="index.html#amd">Install AMD GPU Drivers</a>
+        </div>
         <a href="index.html#tempfiles">Windows Cleaning</a>
+        <a href="https://github.com/The-Smackers/AWPtimizr" target="_blank">AWPtimizr (BETA)</a>
         <a href="index.html#faceit">Windows 11 and Faceit AC</a>
         <a href="index.html#stutter">Fix Game Stutter</a>
-        <a href="index.html#rbar">What is Resizable BAR</a>
-        <a href="index.html#rbarcheck">Check Resizable BAR Enabled</a>
-        <a href="index.html#rbarbios">Enable Resizable BAR in BIOS</a>
-        <a href="index.html#rbarnv">Enable Resizable BAR for NVIDIA</a>
-        <a href="index.html#rbaramd">Enable Resizable BAR for AMD</a>
+        <div class="menu-item">Resizable BAR</div>
+        <div class="submenu">
+            <a href="index.html#rbar">What is Resizable BAR</a>
+            <a href="index.html#rbarcheck">Check rBAR if Enabled</a>
+            <a href="index.html#rbarbios">Enable rBAR in BIOS</a>
+            <a href="index.html#rbarnv">Enable rBAR for NVIDIA</a>
+            <a href="index.html#rbaramd">Enable rBAR for AMD</a>
+        </div>
 <!--    <a href="index.html#haccel">Disable Hardware Acceleration <br> in Applications</a> -->
-        <a href="index.html#cs2optimize">Counter-Strike 2 <br>Optimizations</a>
-        <a href="index.html#cs2settings">Counter-Strike 2 <br>Settings</a>
-        <a href="index.html#autoexec">Counter-Strike 2 <br>autoexec file</a>
-        <a href="index.html#benchmarks">Counter-Strike 2 <br>Benchmarks</a>
+        <div class="menu-item">Counter-Strike 2</div>
+        <div class="submenu">
+            <a href="index.html#cs2optimize">Counter-Strike 2 Optimizations</a>
+            <a href="index.html#cs2settings">Counter-Strike 2 Settings</a>
+            <a href="index.html#autoexec">Counter-Strike 2 autoexec file</a>
+            <a href="index.html#benchmarks">Counter-Strike 2 Benchmarks</a>
+        </div>
         <a href="tips.html">Security Tips</a>
         <p><br></p>
     </div>
 
     <div class="content">
-        <!-- The banner logo -->
-        <div class="banner">
-            <div>
-                <h1 id="home">The Smackers Security Tips</h1>
-                <h2>Don't get scammed today!</h2>
+        <div class="main-wrapper">
+            <!-- The banner logo -->
+            <div class="banner">
+                <div>
+                    <h1 id="home">PC and Counter-Strike 2 Security Tips Guide</h1>
+                    <h2>Don't get scammed today!</h2>
+                </div>
             </div>
-        </div>
 
-        <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
-        <button onclick="darkMode()">Darkmode</button>
-        <button onclick="lightMode()">LightMode</button>
+            <div class="mode-toggle">
+                <!-- <h3 id="DarkModetext">Dark Mode for this page is ON</h3> -->
+                <button onclick="darkMode()" class="btn-dark">Dark Mode</button>
+                <button onclick="lightMode()" class="btn-light">Light Mode</button>
+            </div>
 
+            <div class="content-section">
     <main>
         <section>
             <h2>Browse the Web Safely</h2>
@@ -138,6 +186,8 @@
             </ol>
         </section>
     </main>
+            </div>
+        </div>
 
         <footer>
             <div class="footer">
@@ -157,25 +207,62 @@
                   </ul>
                 </div>
                 <div class="row">
-                    The Smackers &copy; 2024
+                    The Smackers &copy; 2025
                 </div>
             </div>
         </footer>
     </div>
 
     <script>
+        // Mobile navigation toggle
+        function toggleNav() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Dark mode toggle
         function darkMode() {
             let element = document.body;
             let content = document.getElementById("DarkModetext");
             element.className = "dark-mode";
-            content.innerText = "Dark Mode for this page is ON";
+            localStorage.setItem('theme', 'dark');
         }
+        
         function lightMode() {
             let element = document.body;
             let content = document.getElementById("DarkModetext");
             element.className = "light-mode";
-            content.innerText = "Dark Mode for this page is OFF";
+            localStorage.setItem('theme', 'light');
         }
+
+        // DOM ready event handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Submenu toggle
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                // Add click event for menu items
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.toggle('active');
+                    const submenu = this.nextElementSibling;
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        if (submenu.style.display === 'block') {
+                            submenu.style.display = 'none';
+                        } else {
+                            submenu.style.display = 'block';
+                        }
+                    }
+                });
+            });
+
+            // Load saved theme preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                lightMode();
+            } else {
+                darkMode(); // Default to dark mode
+            }
+        });
     </script>
 </body>
 </html>

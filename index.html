@@ -3,68 +3,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <title>
-          PC and CS2 Optimizations
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>PC and Counter-Strike 2 Optimization Guide - Boost FPS & Performance | The Smackers</title>
+    <meta name="description" content="Comprehensive guide for optimizing Counter-Strike 2 performance. Learn how to improve FPS, configure Windows 11, optimize GPU settings, and enhance gaming experience.">
+    <meta name="keywords" content="CS2 optimization, Counter-Strike 2 FPS boost, gaming performance, Windows 11 gaming, GPU optimization, NVIDIA settings, AMD settings, CS2 autoexec, gaming guides">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PC and Counter-Strike 2 Optimization Guide - Boost FPS & Performance">
+    <meta property="og:description" content="Comprehensive guide for optimizing Counter-Strike 2 performance and Windows settings.">
+    <meta property="og:url" content="https://the-smackers.github.io/index.html">
+    <meta property="og:image" content="https://the-smackers.github.io/static/logo.png">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PC and Counter-Strike 2 Optimization Guide">
+    <meta name="twitter:description" content="Boost your CS2 performance with our comprehensive optimization guide.">
+    <meta name="twitter:image" content="https://the-smackers.github.io/static/logo.png">
+    
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="The Smackers">
+    <link rel="canonical" href="https://the-smackers.github.io/index.html">
+    
+    <!-- Favicon and Stylesheets -->
     <link href="static/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 
 <body>
+    <!-- Floating Ad Panel -->
+    <a href="https://github.com/The-Smackers/AWPtimizr" target="_blank" class="floating-ad">
+        <img src="https://github.com/The-Smackers/AWPtimizr/raw/main/logo.png" alt="AWPtimizr">
+    </a>
+
+    <!-- Mobile Navigation Toggle -->
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <!-- The sidebar -->
-    <div class="sidebar">
+    <nav class="sidebar">
         <a class="active" href="index.html">Home</a>
-        <a href="index.html#prep">Windows 11 Preparation</a>
-        <a href="index.html#check">Windows 11 Checklist</a>
-        <a href="index.html#optimize">Windows 11 Optimize</a>
+        
+        <!-- Windows Section -->
+        <div class="menu-item">Windows 11</div>
+        <div class="submenu">
+            <a href="index.html#prep">Windows 11 Preparation</a>
+            <a href="index.html#check">Windows 11 Checklist</a>
+            <a href="index.html#optimize">Windows 11 Optimize</a>
+        </div>
         <a href="index.html#xmp">XMP Profiles</a>
-        <a href="index.html#clean">Clean GPU Drivers</a>
-        <a href="index.html#nvidia">Install NVIDIA GPU <br>Drivers</a>
-        <a href="index.html#nvcp">Tweak NVIDIA <br>Control Panel</a>
-        <a href="index.html#amd">Install AMD GPU <br>Drivers</a>
+        
+        <!-- GPU Section -->
+        <div class="menu-item">GPU Drivers</div>
+        <div class="submenu">
+            <a href="index.html#clean">Clean GPU Drivers</a>
+            <a href="index.html#nvidia">Install NVIDIA GPU Drivers</a>
+            <a href="index.html#nvcp">Tweak NVIDIA Control Panel</a>
+            <a href="index.html#amd">Install AMD GPU Drivers</a>
+        </div>
+        
+        <!-- System Section -->
         <a href="index.html#tempfiles">Windows Cleaning</a>
+        <a href="https://github.com/The-Smackers/AWPtimizr" target="_blank">AWPtimizr (BETA)</a>
         <a href="index.html#faceit">Windows 11 and Faceit AC</a>
         <a href="index.html#stutter">Fix Game Stutter</a>
-        <a href="index.html#rbar">What is Resizable BAR</a>
-        <a href="index.html#rbarcheck">Check Resizable BAR Enabled</a>
-        <a href="index.html#rbarbios">Enable Resizable BAR in BIOS</a>
-        <a href="index.html#rbarnv">Enable Resizable BAR for NVIDIA</a>
-        <a href="index.html#rbaramd">Enable Resizable BAR for AMD</a>
-<!--    <a href="index.html#haccel">Disable Hardware Acceleration <br> in Applications</a> -->
-        <a href="index.html#cs2optimize">Counter-Strike 2 <br>Optimizations</a>
-        <a href="index.html#cs2settings">Counter-Strike 2 <br>Settings</a>
-        <a href="index.html#autoexec">Counter-Strike 2 <br>autoexec file</a>
-        <a href="index.html#benchmarks">Counter-Strike 2 <br>Benchmarks</a>
+        
+        <!-- BAR Section -->
+        <div class="menu-item">Resizable BAR</div>
+        <div class="submenu">
+            <a href="index.html#rbar">What is Resizable BAR</a>
+            <a href="index.html#rbarcheck">Check rBAR if Enabled</a>
+            <a href="index.html#rbarbios">Enable rBAR in BIOS</a>
+            <a href="index.html#rbarnv">Enable rBAR for NVIDIA</a>
+            <a href="index.html#rbaramd">Enable rBAR for AMD</a>
+        </div>
+        
+        <!-- CS2 Section -->
+        <div class="menu-item">Counter-Strike 2</div>
+        <div class="submenu">
+            <a href="index.html#cs2optimize">Counter-Strike 2 Optimizations</a>
+            <a href="index.html#cs2settings">Counter-Strike 2 Settings</a>
+            <a href="index.html#autoexec">Counter-Strike 2 autoexec file</a>
+            <a href="index.html#benchmarks">Counter-Strike 2 Benchmarks</a>
+        </div>
+        
+        <!-- Other -->
         <a href="tips.html">Security Tips</a>
-        <p><br></p>
-    </div>
+    </nav>
 
     <div class="content">
-        <!-- The banner logo -->
-        <div class="banner">
-            <div>
-                <h1 id="home">PC and Counter-Strike 2 Optimization Guide</h1>
-                <h2>Get more frames today!</h2>
+        <div class="main-wrapper">
+            <!-- The banner logo -->
+            <div class="banner">
+                <div>
+                    <h1 id="home">PC and Counter-Strike 2 Optimization Guide</h1>
+                    <h2>Get more frames today!</h2>
+                </div>
             </div>
+
+            <div class="mode-toggle">
+                <!-- <h3 id="DarkModetext">Dark Mode for this page is ON</h3> -->
+                <button onclick="darkMode()">Dark Mode</button>
+                <button onclick="lightMode()">Light Mode</button>
+            </div>
+
+        <div class="content-section">
+            <p><i>This guide is created and assembled by The Smackers for playing Counter-Strike 2 on a Desktop PC, follow this guide at your own risk.</i></p>
+            <p><i>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</i></p>
         </div>
 
-        <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
-        <button onclick="darkMode()">Darkmode</button>
-        <button onclick="lightMode()">LightMode</button>
+        <div class="content-section">
+            <h2 id="prep">Windows 11 Preparation</h2>
 
-        <p><i>This guide is created and assembled by The Smackers for playing Counter-Strike 2 on a Desktop PC, follow this guide at your own risk.</i></p>
-        <p><i>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can&#39;t follow the steps exactly.</i></p>
-
-        <h2 id="prep">Windows 11 Preparation</h2>
-
-        <p>Nothing special/different in Windows 11 so same practices before still apply like the below tips. A clean install is always better than updating to Windows 11</p>
-        <p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and create a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
+            <p>Nothing special/different in Windows 11 so same practices before still apply like the below tips. A clean install is always better than updating to Windows 11</p>
+            <p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and create a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
 
         <ul>
             <li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
@@ -101,16 +161,6 @@
             <li>Open Windows Settings, click Gaming -> Xbox Game Bar and turn it Off
 
             <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" alt="" src="static/gamebar.png"></p></li>
-
-            <li>Open Windows Settings, click Apps -> Installed apps
-
-            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" alt="" src="static/settings_app1.png"></p></li>
-
-            <li>Now click the ellipsis (3 dots) on each Microsoft Corporation app that is not named "Runtime" and select <b>Advanced options</b>
-            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" alt="" src="static/ellipsis.png"></p></li>
-            <li>Now click the dropdown for <b>Let this app run in background</b> and change to Never. Do this for all Microsoft Corporation apps except for Windows Security
-
-            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" alt="" src="static/settings_app2.png"></p></li>
 
             <li>Restart Windows to complete</li>
         </ol>
@@ -171,7 +221,7 @@
             <li>Download, install and open <a rel="noopener noreferrer" target="_blank" href="https://www.techpowerup.com/download/techpowerup-nvcleanstall">NVCleanstall</a></li>
             <li>Manually select a driver version and choose the latest 64 bit Desktop driver</li>
             <li>Click Next and click Next again</li>
-            <li>Copy the settings like the images below on the Installation Tweaks screen then click Next (If you want ShadowPlay/GeForce Experience check those boxes)</li>
+            <li>Copy the settings like the images below on the Installation Tweaks screen then click Next (If you want GeForce Experience or ShadowPlay check those boxes)</li>
             <li>Click Next and then click Install and wait for the installation to complete</li>
         </ul>
         <p>WARNING:</p>
@@ -359,7 +409,7 @@
         <h3 id="rbarnv">You Must Also Now Enable Resize BAR using &nbsp;NVIDIA Profile Inspector</h3>
 
         <ul>
-            <li>Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" target="_blank" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
+            <li>Download and extract the latest NVIDIA Profile Inspector (<a rel="noopener noreferrer" target="_blank" href="https://github.com/Orbmu2k/nvidiaProfileInspector/releases/tag/2.4.0.20">nvidiaProfileInspector.zip</a>) to a folder you can find</li>
             <li>Open nvidiaProfileInspector and scroll down to section <strong>5 - Common</strong> and change the 3 rBAR options like the image below</li>
         </ul>
 
@@ -752,25 +802,77 @@
                   </ul>
                 </div>
                 <div class="row">
-                    The Smackers &copy; 2024
+                    The Smackers &copy; 2025
                 </div>
             </div>
         </footer>
     </div>
 
     <script>
+        // Submenu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                // Add click event for menu items
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.toggle('active');
+                    const submenu = this.nextElementSibling;
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        if (submenu.style.display === 'block') {
+                            submenu.style.display = 'none';
+                        } else {
+                            submenu.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Dark mode toggle
         function darkMode() {
             let element = document.body;
             let content = document.getElementById("DarkModetext");
             element.className = "dark-mode";
-            content.innerText = "Dark Mode for this page is ON";
+            localStorage.setItem('theme', 'dark');
         }
+        
         function lightMode() {
             let element = document.body;
             let content = document.getElementById("DarkModetext");
             element.className = "light-mode";
-            content.innerText = "Dark Mode for this page is OFF";
+            localStorage.setItem('theme', 'light');
         }
+
+        // Mobile navigation toggle
+        function toggleNav() {
+            const sidebar = document.querySelector('.sidebar');
+            const toggle = document.querySelector('.nav-toggle');
+            sidebar.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const toggle = document.querySelector('.nav-toggle');
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(event.target) && 
+                !toggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
+
+        // Load saved theme preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                lightMode();
+            } else {
+                darkMode(); // Default to dark mode
+            }
+        });
     </script>
 </body>
 </html>
