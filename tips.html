@@ -31,6 +31,7 @@
     <!-- Favicon and Stylesheets -->
     <link href="static/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="static/style.css">
 </head>
 
@@ -48,8 +49,10 @@
     </button>
 
     <!-- The sidebar -->
-    <div class="sidebar">
+    <nav class="sidebar">
         <a class="active" href="index.html">Home</a>
+        
+        <!-- Windows Section -->
         <div class="menu-item">Windows 11</div>
         <div class="submenu">
             <a href="index.html#prep">Windows 11 Preparation</a>
@@ -57,6 +60,8 @@
             <a href="index.html#optimize">Windows 11 Optimize</a>
         </div>
         <a href="index.html#xmp">XMP Profiles</a>
+        
+        <!-- GPU Section -->
         <div class="menu-item">GPU Drivers</div>
         <div class="submenu">
             <a href="index.html#clean">Clean GPU Drivers</a>
@@ -64,10 +69,13 @@
             <a href="index.html#nvcp">Tweak NVIDIA Control Panel</a>
             <a href="index.html#amd">Install AMD GPU Drivers</a>
         </div>
+        
+        <!-- System Section -->
         <a href="index.html#tempfiles">Windows Cleaning</a>
-        <a href="https://github.com/The-Smackers/AWPtimizr" target="_blank">AWPtimizr (BETA)</a>
         <a href="index.html#faceit">Windows 11 and Faceit AC</a>
         <a href="index.html#stutter">Fix Game Stutter</a>
+        
+        <!-- BAR Section -->
         <div class="menu-item">Resizable BAR</div>
         <div class="submenu">
             <a href="index.html#rbar">What is Resizable BAR</a>
@@ -76,17 +84,21 @@
             <a href="index.html#rbarnv">Enable rBAR for NVIDIA</a>
             <a href="index.html#rbaramd">Enable rBAR for AMD</a>
         </div>
-<!--    <a href="index.html#haccel">Disable Hardware Acceleration <br> in Applications</a> -->
+        
+        <!-- CS2 Section -->
         <div class="menu-item">Counter-Strike 2</div>
         <div class="submenu">
             <a href="index.html#cs2optimize">Counter-Strike 2 Optimizations</a>
+            <a href="index.html#fpscap">FPS Cap</a>
             <a href="index.html#cs2settings">Counter-Strike 2 Settings</a>
             <a href="index.html#autoexec">Counter-Strike 2 autoexec file</a>
             <a href="index.html#benchmarks">Counter-Strike 2 Benchmarks</a>
         </div>
+        
+        <!-- Other -->
+        <a href="https://github.com/The-Smackers/AWPtimizr" target="_blank">AWPtimizr (BETA)</a>
         <a href="tips.html">Security Tips</a>
-        <p><br></p>
-    </div>
+    </nav>
 
     <div class="content">
         <div class="main-wrapper">
@@ -192,19 +204,15 @@
         <footer>
             <div class="footer">
                 <div class="row">
-                <a href="https://github.com/The-Smackers/PC-Optimizations"><i class="fa fa-github"></i></a>
-                <a href="https://steamcommunity.com"><i class="fa fa-steam"></i></a>
-                <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                <a href="https://github.com/The-Smackers"><i class="fa fa-github"></i></a>
+                <a href="https://steamcommunity.com/tradeoffer/new/?partner=114997289&token=67-Xmtoj"><i class="fa fa-steam"></i></a>
+                <a href="https://www.youtube.com/@TheSmackers2024"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.youtube.com/@iiCaptain04"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.youtube.com/@DjDesfosse"><i class="fa fa-youtube"></i></a>
                 <a href="https://x.com"><i class="fa fa-twitter"></i></a>
-                </div>
-                <div class="row">
-                  <ul>
-                  <li><a href="moo@moo">Contact us</a></li>
-                  <li><a href="#">Discord</a></li>
-                  <li><a href="#">Steam Giveaways</a></li>
-                  <li><a href="#">Leetify Stats</a></li>
-                  <li><a href="#">Application</a></li>
-                  </ul>
+                <a href="https://www.paypal.com/ncp/payment/8UEVM2WHXGL88"><i class="fa fa-paypal"></i></a>
+                <a href="mailto:awptimizr.radiation012@passfwd.com"><i class="fa fa-envelope"></i></a>
+                <a href="#"><i class="fa fa-discord"></i></a>
                 </div>
                 <div class="row">
                     The Smackers &copy; 2025
@@ -213,12 +221,57 @@
         </footer>
     </div>
 
+    <!-- Floating To Top Button -->
+    <button class="to-top-btn" onclick="scrollToTop()" title="Go to top">
+        <img src="static/icons8-ak-47-48.png" alt="To Top" />
+    </button>
+
     <script>
-        // Mobile navigation toggle
-        function toggleNav() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.classList.toggle('active');
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
+
+        // Submenu toggle with state persistence
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            // Load saved submenu states
+            menuItems.forEach((item, index) => {
+                const submenu = item.nextElementSibling;
+                if (submenu && submenu.classList.contains('submenu')) {
+                    const isOpen = localStorage.getItem(`submenu-${index}`) === 'true';
+                    if (isOpen) {
+                        item.classList.add('active');
+                        submenu.style.display = 'block';
+                    } else {
+                        submenu.style.display = 'none';
+                    }
+                }
+            });
+            
+            menuItems.forEach((item, index) => {
+                // Add click event for menu items
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.toggle('active');
+                    const submenu = this.nextElementSibling;
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        const isCurrentlyOpen = submenu.style.display === 'block';
+                        if (isCurrentlyOpen) {
+                            submenu.style.display = 'none';
+                            localStorage.setItem(`submenu-${index}`, 'false');
+                        } else {
+                            submenu.style.display = 'block';
+                            localStorage.setItem(`submenu-${index}`, 'true');
+                        }
+                    }
+                });
+            });
+        });
 
         // Dark mode toggle
         function darkMode() {
@@ -235,27 +288,28 @@
             localStorage.setItem('theme', 'light');
         }
 
-        // DOM ready event handlers
-        document.addEventListener('DOMContentLoaded', function() {
-            // Submenu toggle
-            const menuItems = document.querySelectorAll('.menu-item');
-            menuItems.forEach(item => {
-                // Add click event for menu items
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    this.classList.toggle('active');
-                    const submenu = this.nextElementSibling;
-                    if (submenu && submenu.classList.contains('submenu')) {
-                        if (submenu.style.display === 'block') {
-                            submenu.style.display = 'none';
-                        } else {
-                            submenu.style.display = 'block';
-                        }
-                    }
-                });
-            });
+        // Mobile navigation toggle
+        function toggleNav() {
+            const sidebar = document.querySelector('.sidebar');
+            const toggle = document.querySelector('.nav-toggle');
+            sidebar.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
 
-            // Load saved theme preference
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const toggle = document.querySelector('.nav-toggle');
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(event.target) && 
+                !toggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
+
+        // Load saved theme preference
+        document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'light') {
                 lightMode();
