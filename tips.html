@@ -240,40 +240,63 @@
         // Submenu toggle with state persistence
         document.addEventListener('DOMContentLoaded', function() {
             const menuItems = document.querySelectorAll('.menu-item');
-            
-            // Load saved submenu states
             menuItems.forEach((item, index) => {
                 const submenu = item.nextElementSibling;
                 if (submenu && submenu.classList.contains('submenu')) {
-                    const isOpen = localStorage.getItem(`submenu-${index}`) === 'true';
-                    if (isOpen) {
+                    // Create unique ID for each submenu
+                    const submenuId = `submenu-${index}`;
+                    
+                    // Restore saved state (using same format as index page)
+                    const savedState = localStorage.getItem(submenuId);
+                    if (savedState === 'open') {
                         item.classList.add('active');
                         submenu.style.display = 'block';
                     } else {
                         submenu.style.display = 'none';
                     }
-                }
-            });
-            
-            menuItems.forEach((item, index) => {
-                // Add click event for menu items
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    this.classList.toggle('active');
-                    const submenu = this.nextElementSibling;
-                    if (submenu && submenu.classList.contains('submenu')) {
-                        const isCurrentlyOpen = submenu.style.display === 'block';
-                        if (isCurrentlyOpen) {
+                    
+                    // Add click event for menu items
+                    item.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        this.classList.toggle('active');
+                        
+                        const isExpanding = submenu.style.display !== 'block';
+                        
+                        if (submenu.style.display === 'block') {
                             submenu.style.display = 'none';
-                            localStorage.setItem(`submenu-${index}`, 'false');
+                            localStorage.setItem(submenuId, 'closed');
                         } else {
                             submenu.style.display = 'block';
-                            localStorage.setItem(`submenu-${index}`, 'true');
+                            localStorage.setItem(submenuId, 'open');
                         }
-                    }
-                });
+                        
+                        // Sync corresponding main content section state for index page
+                        syncMainContentSectionState(this.textContent.trim(), isExpanding);
+                    });
+                }
             });
         });
+        
+        // Sync main content section state in localStorage for index page
+        function syncMainContentSectionState(menuText, isExpanded) {
+            // Mapping of menu item text to section IDs (same as index page)
+            const menuToSectionMap = {
+                'Windows 11': 'windows11-content',
+                'GPU Drivers': 'gpu-drivers-content',
+                'Resizable BAR': 'rbar-content',
+                'Counter-Strike 2': 'cs2-content'
+            };
+            
+            const sectionId = menuToSectionMap[menuText];
+            if (sectionId) {
+                // Update the section state in localStorage so index page reflects the change
+                if (isExpanded) {
+                    localStorage.setItem(`section-${sectionId}`, 'expanded');
+                } else {
+                    localStorage.setItem(`section-${sectionId}`, 'collapsed');
+                }
+            }
+        }
 
         // Dark mode toggle
         function darkMode() {

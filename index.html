@@ -1353,8 +1353,48 @@
                 const isCollapsed = content.classList.contains('collapsed');
                 localStorage.setItem(`section-${sectionId}`, isCollapsed ? 'collapsed' : 'expanded');
                 
+                // Sync corresponding sidebar menu
+                syncSidebarMenu(sectionId, !isCollapsed);
+                
                 // Update expand/collapse all button state
                 updateExpandCollapseAllButton();
+            }
+        }
+        
+        // Sync sidebar menu state with main content sections
+        function syncSidebarMenu(sectionId, isExpanded) {
+            // Mapping of section IDs to menu item text
+            const sectionToMenuMap = {
+                'windows11-content': 'Windows 11',
+                'gpu-drivers-content': 'GPU Drivers',
+                'rbar-content': 'Resizable BAR',
+                'cs2-content': 'Counter-Strike 2'
+            };
+            
+            const menuText = sectionToMenuMap[sectionId];
+            if (menuText) {
+                // Find the menu item by its text content
+                const menuItems = document.querySelectorAll('.menu-item');
+                menuItems.forEach((item, index) => {
+                    if (item.textContent.trim() === menuText) {
+                        const submenu = item.nextElementSibling;
+                        if (submenu && submenu.classList.contains('submenu')) {
+                            const submenuId = `submenu-${index}`;
+                            
+                            if (isExpanded) {
+                                // Expand menu
+                                item.classList.add('active');
+                                submenu.style.display = 'block';
+                                localStorage.setItem(submenuId, 'open');
+                            } else {
+                                // Collapse menu
+                                item.classList.remove('active');
+                                submenu.style.display = 'none';
+                                localStorage.setItem(submenuId, 'closed');
+                            }
+                        }
+                    }
+                });
             }
         }
         
@@ -1369,6 +1409,9 @@
                     header.classList.remove('collapsed');
                     content.classList.remove('collapsed');
                     localStorage.setItem(`section-${sectionId}`, 'expanded');
+                    
+                    // Sync corresponding sidebar menu
+                    syncSidebarMenu(sectionId, true);
                 }
             });
         }
@@ -1384,6 +1427,9 @@
                     header.classList.add('collapsed');
                     content.classList.add('collapsed');
                     localStorage.setItem(`section-${sectionId}`, 'collapsed');
+                    
+                    // Sync corresponding sidebar menu
+                    syncSidebarMenu(sectionId, false);
                 }
             });
         }
@@ -1428,6 +1474,9 @@
                 header.classList.remove('collapsed');
                 content.classList.remove('collapsed');
                 localStorage.setItem(`section-${sectionId}`, 'expanded');
+                
+                // Sync corresponding sidebar menu
+                syncSidebarMenu(sectionId, true);
             }
             
             // Then scroll to the element after a short delay to allow expansion animation
@@ -1465,6 +1514,8 @@
                         e.preventDefault();
                         this.classList.toggle('active');
                         
+                        const isExpanding = submenu.style.display !== 'block';
+                        
                         if (submenu.style.display === 'block') {
                             submenu.style.display = 'none';
                             localStorage.setItem(submenuId, 'closed');
@@ -1472,10 +1523,47 @@
                             submenu.style.display = 'block';
                             localStorage.setItem(submenuId, 'open');
                         }
+                        
+                        // Sync corresponding main content section
+                        syncMainContentSection(this.textContent.trim(), isExpanding);
                     });
                 }
             });
         });
+        
+        // Sync main content section with sidebar menu state
+        function syncMainContentSection(menuText, isExpanded) {
+            // Mapping of menu item text to section IDs
+            const menuToSectionMap = {
+                'Windows 11': 'windows11-content',
+                'GPU Drivers': 'gpu-drivers-content',
+                'Resizable BAR': 'rbar-content',
+                'Counter-Strike 2': 'cs2-content'
+            };
+            
+            const sectionId = menuToSectionMap[menuText];
+            if (sectionId) {
+                const header = document.querySelector(`[data-section="${sectionId}"]`);
+                const content = document.getElementById(sectionId);
+                
+                if (header && content) {
+                    if (isExpanded) {
+                        // Expand section
+                        header.classList.remove('collapsed');
+                        content.classList.remove('collapsed');
+                        localStorage.setItem(`section-${sectionId}`, 'expanded');
+                    } else {
+                        // Collapse section
+                        header.classList.add('collapsed');
+                        content.classList.add('collapsed');
+                        localStorage.setItem(`section-${sectionId}`, 'collapsed');
+                    }
+                    
+                    // Update expand/collapse all button state
+                    updateExpandCollapseAllButton();
+                }
+            }
+        }
 
         // Dark mode toggle
         function darkMode() {
@@ -1530,10 +1618,14 @@
                 
                 if (header && content) {
                     // Default to collapsed, unless saved state says expanded
-                    if (savedState !== 'expanded') {
+                    const isExpanded = savedState === 'expanded';
+                    if (!isExpanded) {
                         header.classList.add('collapsed');
                         content.classList.add('collapsed');
                     }
+                    
+                    // Sync initial sidebar menu state
+                    syncSidebarMenu(sectionId, isExpanded);
                 }
             });
             
