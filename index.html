@@ -100,6 +100,9 @@
             <span class="awp-text">AWP</span><span class="timizr-text">timizr</span> <span class="beta-text">(BETA)</span>
         </a>
         <a href="tips.html" class="security-tips-link">Security Tips</a>
+        <button class="menu-expand-btn" id="security-expand-btn" onclick="toggleAllSectionsFromMenu()" title="Expand all sections">
+            <span id="security-expand-text">Expand Menu</span>
+        </button>
     </nav>
 
     <div class="content">
@@ -125,7 +128,6 @@
             <!-- Expand All Button -->
             <div class="expand-all-container">
                 <button class="expand-all-btn" id="expand-all-btn" onclick="toggleAllSections()" title="Expand all sections">
-                    <img src="static/icons8-ak-47-48.png" alt="Expand All">
                     <span id="expand-all-text">Expand All Sections</span>
                 </button>
             </div>
@@ -1261,40 +1263,40 @@
         .expand-all-btn {
             background: linear-gradient(135deg, #e08900, #cc7a00); /* AWPtimizr orange */
             border: none;
-            padding: 12px 20px;
-            border-radius: 25px;
+            border-left: 3px solid #e08900;
+            padding: 12px 16px;
+            border-radius: 8px;
             cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: block;
             color: white;
             font-size: 14px;
             font-weight: 600;
+            text-align: center;
+            width: 200px;
+            margin: 0 auto;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(224, 137, 0, 0.3);
+            box-shadow: 0 2px 8px rgba(224, 137, 0, 0.3);
         }
         
         .expand-all-btn:hover {
             background: linear-gradient(135deg, #ff9500, #e08900);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(224, 137, 0, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(224, 137, 0, 0.4);
+            border-left-color: #e08900;
         }
         
         .expand-all-btn.collapse-mode {
             background: linear-gradient(135deg, #05addc, #0396c7); /* AWPtimizr blue */
-            box-shadow: 0 4px 15px rgba(5, 173, 220, 0.3);
+            box-shadow: 0 2px 8px rgba(5, 173, 220, 0.3);
+            border-left-color: #05addc;
         }
         
         .expand-all-btn.collapse-mode:hover {
             background: linear-gradient(135deg, #06c4f0, #05addc);
-            box-shadow: 0 6px 20px rgba(5, 173, 220, 0.4);
+            box-shadow: 0 4px 12px rgba(5, 173, 220, 0.4);
+            border-left-color: #05addc;
         }
         
-        .expand-all-btn img {
-            width: 20px;
-            height: 20px;
-            filter: brightness(0) invert(1);
-        }
         
         /* Sub-section collapse buttons */
         .sub-collapse-container {
@@ -1434,10 +1436,58 @@
             });
         }
         
+        // Toggle all sections from menu button
+        function toggleAllSectionsFromMenu() {
+            const button = document.getElementById('security-expand-btn');
+            const buttonText = document.getElementById('security-expand-text');
+            const mainButton = document.getElementById('expand-all-btn');
+            const mainButtonText = document.getElementById('expand-all-text');
+            const sections = ['gpu-drivers-content', 'rbar-content', 'cs2-content', 'windows11-content', 'xmp-content', 'windows-cleaning-content', 'faceit-ac-content', 'stutter-fix-content'];
+            
+            // Check if any sections are expanded
+            let hasExpandedSections = false;
+            sections.forEach(sectionId => {
+                const content = document.getElementById(sectionId);
+                if (content && !content.classList.contains('collapsed')) {
+                    hasExpandedSections = true;
+                }
+            });
+            
+            if (hasExpandedSections) {
+                // If any sections are expanded, collapse all
+                collapseAllSections();
+                button.classList.remove('collapse-mode');
+                buttonText.textContent = 'Expand Menu';
+                button.title = 'Expand all sections';
+                
+                // Update main button too
+                if (mainButton && mainButtonText) {
+                    mainButton.classList.remove('collapse-mode');
+                    mainButtonText.textContent = 'Expand All Sections';
+                    mainButton.title = 'Expand all sections';
+                }
+            } else {
+                // If all sections are collapsed, expand all
+                expandAllSections();
+                button.classList.add('collapse-mode');
+                buttonText.textContent = 'Collapse Menu';
+                button.title = 'Collapse all sections';
+                
+                // Update main button too
+                if (mainButton && mainButtonText) {
+                    mainButton.classList.add('collapse-mode');
+                    mainButtonText.textContent = 'Collapse All Sections';
+                    mainButton.title = 'Collapse all sections';
+                }
+            }
+        }
+        
         // Toggle all sections
         function toggleAllSections() {
             const button = document.getElementById('expand-all-btn');
             const buttonText = document.getElementById('expand-all-text');
+            const menuButton = document.getElementById('security-expand-btn');
+            const menuButtonText = document.getElementById('security-expand-text');
             const sections = ['gpu-drivers-content', 'rbar-content', 'cs2-content', 'windows11-content', 'xmp-content', 'windows-cleaning-content', 'faceit-ac-content', 'stutter-fix-content'];
             
             // Check if any sections are expanded
@@ -1455,12 +1505,26 @@
                 button.classList.remove('collapse-mode');
                 buttonText.textContent = 'Expand All Sections';
                 button.title = 'Expand all sections';
+                
+                // Update menu button too
+                if (menuButton && menuButtonText) {
+                    menuButton.classList.remove('collapse-mode');
+                    menuButtonText.textContent = 'Expand Menu';
+                    menuButton.title = 'Expand all sections';
+                }
             } else {
                 // If all sections are collapsed, expand all
                 expandAllSections();
                 button.classList.add('collapse-mode');
                 buttonText.textContent = 'Collapse All Sections';
                 button.title = 'Collapse all sections';
+                
+                // Update menu button too
+                if (menuButton && menuButtonText) {
+                    menuButton.classList.add('collapse-mode');
+                    menuButtonText.textContent = 'Collapse Menu';
+                    menuButton.title = 'Collapse all sections';
+                }
             }
         }
         
@@ -1637,6 +1701,8 @@
         function updateExpandCollapseAllButton() {
             const button = document.getElementById('expand-all-btn');
             const buttonText = document.getElementById('expand-all-text');
+            const menuButton = document.getElementById('security-expand-btn');
+            const menuButtonText = document.getElementById('security-expand-text');
             const sections = ['gpu-drivers-content', 'rbar-content', 'cs2-content', 'windows11-content', 'xmp-content', 'windows-cleaning-content', 'faceit-ac-content', 'stutter-fix-content'];
             
             // Check if any sections are expanded
@@ -1648,6 +1714,7 @@
                 }
             });
             
+            // Update main button
             if (hasExpandedSections) {
                 button.classList.add('collapse-mode');
                 buttonText.textContent = 'Collapse All Sections';
@@ -1656,6 +1723,19 @@
                 button.classList.remove('collapse-mode');
                 buttonText.textContent = 'Expand All Sections';
                 button.title = 'Expand all sections';
+            }
+            
+            // Update menu button
+            if (menuButton && menuButtonText) {
+                if (hasExpandedSections) {
+                    menuButton.classList.add('collapse-mode');
+                    menuButtonText.textContent = 'Collapse Menu';
+                    menuButton.title = 'Collapse all sections';
+                } else {
+                    menuButton.classList.remove('collapse-mode');
+                    menuButtonText.textContent = 'Expand Menu';
+                    menuButton.title = 'Expand all sections';
+                }
             }
         }
     </script>

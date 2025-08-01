@@ -531,6 +531,96 @@ pre, code {
     border-left-color: #b377e6 !important;
 }
 
+/* Menu Expand/Collapse Button - matches menu item styling */
+.sidebar .menu-expand-btn {
+    background: linear-gradient(135deg, #e08900, #cc7a00); /* AWPtimizr orange */
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 8px 12px;
+    border-left: 3px solid #e08900 !important;
+    box-shadow: 0 2px 8px rgba(224, 137, 0, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 14px;
+    text-decoration: none;
+    width: calc(100% - 24px);
+}
+
+.sidebar .menu-expand-btn:hover {
+    background: linear-gradient(135deg, #ff9500, #e08900);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224, 137, 0, 0.4);
+    border-left-color: #e08900 !important;
+    color: #ffffff !important;
+}
+
+.sidebar .menu-expand-btn.collapse-mode {
+    background: linear-gradient(135deg, #05addc, #0396c7); /* AWPtimizr blue */
+    border-left-color: #05addc !important;
+    box-shadow: 0 2px 8px rgba(5, 173, 220, 0.3);
+}
+
+.sidebar .menu-expand-btn.collapse-mode:hover {
+    background: linear-gradient(135deg, #06c4f0, #05addc);
+    box-shadow: 0 4px 12px rgba(5, 173, 220, 0.4);
+    border-left-color: #05addc !important;
+}
+
+/* Light mode Menu Expand Button styling */
+.light-mode .sidebar .menu-expand-btn {
+    background: linear-gradient(135deg, #e08900, #cc7a00);
+    border-left-color: #e08900 !important;
+    box-shadow: 0 2px 8px rgba(224, 137, 0, 0.3);
+}
+
+.light-mode .sidebar .menu-expand-btn:hover {
+    background: linear-gradient(135deg, #ff9500, #e08900);
+    box-shadow: 0 4px 12px rgba(224, 137, 0, 0.4);
+    border-left-color: #e08900 !important;
+}
+
+.light-mode .sidebar .menu-expand-btn.collapse-mode {
+    background: linear-gradient(135deg, #05addc, #0396c7);
+    border-left-color: #05addc !important;
+    box-shadow: 0 2px 8px rgba(5, 173, 220, 0.3);
+}
+
+.light-mode .sidebar .menu-expand-btn.collapse-mode:hover {
+    background: linear-gradient(135deg, #06c4f0, #05addc);
+    box-shadow: 0 4px 12px rgba(5, 173, 220, 0.4);
+    border-left-color: #05addc !important;
+}
+
+/* Dark mode Menu Expand Button styling */
+.dark-mode .sidebar .menu-expand-btn {
+    background: linear-gradient(135deg, #e08900, #cc7a00);
+    border-left-color: #e08900 !important;
+    box-shadow: 0 2px 8px rgba(224, 137, 0, 0.3);
+}
+
+.dark-mode .sidebar .menu-expand-btn:hover {
+    background: linear-gradient(135deg, #ff9500, #e08900);
+    box-shadow: 0 4px 12px rgba(224, 137, 0, 0.4);
+    border-left-color: #e08900 !important;
+}
+
+.dark-mode .sidebar .menu-expand-btn.collapse-mode {
+    background: linear-gradient(135deg, #05addc, #0396c7);
+    border-left-color: #05addc !important;
+    box-shadow: 0 2px 8px rgba(5, 173, 220, 0.3);
+}
+
+.dark-mode .sidebar .menu-expand-btn.collapse-mode:hover {
+    background: linear-gradient(135deg, #06c4f0, #05addc);
+    box-shadow: 0 4px 12px rgba(5, 173, 220, 0.4);
+    border-left-color: #05addc !important;
+}
+
 /* AWPtimizr link styling - dark background like floating ad with colorized text */
 .sidebar .awptimizr-link {
     background: rgba(0, 0, 0, 0.8) !important;

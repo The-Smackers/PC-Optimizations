@@ -100,6 +100,9 @@
             <span class="awp-text">AWP</span><span class="timizr-text">timizr</span> <span class="beta-text">(BETA)</span>
         </a>
         <a href="tips.html" class="security-tips-link">Security Tips</a>
+        <button class="menu-expand-btn" id="security-expand-btn" onclick="toggleAllSectionsFromMenu()" title="Expand all sections">
+            <span id="security-expand-text">Expand Menu</span>
+        </button>
     </nav>
 
     <div class="content">
@@ -272,9 +275,15 @@
                         
                         // Sync corresponding main content section state for index page
                         syncMainContentSectionState(this.textContent.trim(), isExpanding);
+                        
+                        // Update expand/collapse menu button state
+                        updateExpandCollapseMenuButton();
                     });
                 }
             });
+            
+            // Update expand/collapse menu button state on load
+            updateExpandCollapseMenuButton();
         });
         
         // Sync main content section state in localStorage for index page
@@ -295,6 +304,89 @@
                 } else {
                     localStorage.setItem(`section-${sectionId}`, 'collapsed');
                 }
+            }
+        }
+        
+        // Update the expand/collapse menu button based on current section states
+        function updateExpandCollapseMenuButton() {
+            const button = document.getElementById('security-expand-btn');
+            const buttonText = document.getElementById('security-expand-text');
+            const sections = ['gpu-drivers-content', 'rbar-content', 'cs2-content', 'windows11-content', 'xmp-content', 'windows-cleaning-content', 'faceit-ac-content', 'stutter-fix-content'];
+            
+            // Check if any sections are expanded (in index page localStorage)
+            let hasExpandedSections = false;
+            sections.forEach(sectionId => {
+                const savedState = localStorage.getItem(`section-${sectionId}`);
+                if (savedState === 'expanded') {
+                    hasExpandedSections = true;
+                }
+            });
+            
+            // Update button state
+            if (hasExpandedSections) {
+                button.classList.add('collapse-mode');
+                buttonText.textContent = 'Collapse Menu';
+                button.title = 'Collapse all sections';
+            } else {
+                button.classList.remove('collapse-mode');
+                buttonText.textContent = 'Expand Menu';
+                button.title = 'Expand all sections';
+            }
+        }
+
+        // Toggle all sections from menu button
+        function toggleAllSectionsFromMenu() {
+            const button = document.getElementById('security-expand-btn');
+            const buttonText = document.getElementById('security-expand-text');
+            const sections = ['gpu-drivers-content', 'rbar-content', 'cs2-content', 'windows11-content', 'xmp-content', 'windows-cleaning-content', 'faceit-ac-content', 'stutter-fix-content'];
+            
+            // Check if any sections are expanded (in index page localStorage)
+            let hasExpandedSections = false;
+            sections.forEach(sectionId => {
+                const savedState = localStorage.getItem(`section-${sectionId}`);
+                if (savedState === 'expanded') {
+                    hasExpandedSections = true;
+                }
+            });
+            
+            if (hasExpandedSections) {
+                // If any sections are expanded, collapse all
+                sections.forEach(sectionId => {
+                    localStorage.setItem(`section-${sectionId}`, 'collapsed');
+                });
+                button.classList.remove('collapse-mode');
+                buttonText.textContent = 'Expand Menu';
+                button.title = 'Expand all sections';
+                
+                // Also collapse the sidebar menus
+                const menuItems = document.querySelectorAll('.menu-item');
+                menuItems.forEach((item, index) => {
+                    const submenu = item.nextElementSibling;
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        item.classList.remove('active');
+                        submenu.style.display = 'none';
+                        localStorage.setItem(`submenu-${index}`, 'closed');
+                    }
+                });
+            } else {
+                // If all sections are collapsed, expand all
+                sections.forEach(sectionId => {
+                    localStorage.setItem(`section-${sectionId}`, 'expanded');
+                });
+                button.classList.add('collapse-mode');
+                buttonText.textContent = 'Collapse Menu';
+                button.title = 'Collapse all sections';
+                
+                // Also expand the sidebar menus
+                const menuItems = document.querySelectorAll('.menu-item');
+                menuItems.forEach((item, index) => {
+                    const submenu = item.nextElementSibling;
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        item.classList.add('active');
+                        submenu.style.display = 'block';
+                        localStorage.setItem(`submenu-${index}`, 'open');
+                    }
+                });
             }
         }
 
