@@ -55,44 +55,44 @@
         <!-- Windows Section -->
         <div class="menu-item">Windows 11</div>
         <div class="submenu">
-            <a href="index.html#prep">Windows 11 Preparation</a>
-            <a href="index.html#check">Windows 11 Checklist</a>
-            <a href="index.html#optimize">Windows 11 Optimize</a>
+            <a href="index.html#prep" onclick="expandAndScrollTo('windows11-content', 'prep')">Windows 11 Preparation</a>
+            <a href="index.html#check" onclick="expandAndScrollTo('windows11-content', 'check')">Windows 11 Checklist</a>
+            <a href="index.html#optimize" onclick="expandAndScrollTo('windows11-content', 'optimize')">Windows 11 Optimize</a>
         </div>
-        <a href="index.html#xmp">XMP Profiles</a>
+        <a href="index.html#xmp" onclick="expandAndScrollTo('xmp-content', 'xmp')">XMP Profiles</a>
         
         <!-- GPU Section -->
         <div class="menu-item">GPU Drivers</div>
         <div class="submenu">
-            <a href="index.html#clean">Clean GPU Drivers</a>
-            <a href="index.html#nvidia">Install NVIDIA GPU Drivers</a>
-            <a href="index.html#nvcp">Tweak NVIDIA Control Panel</a>
-            <a href="index.html#amd">Install AMD GPU Drivers</a>
+            <a href="index.html#clean" onclick="expandAndScrollTo('gpu-drivers-content', 'clean')">Clean GPU Drivers</a>
+            <a href="index.html#nvidia" onclick="expandAndScrollTo('gpu-drivers-content', 'nvidia')">Install NVIDIA GPU Drivers</a>
+            <a href="index.html#nvcp" onclick="expandAndScrollTo('gpu-drivers-content', 'nvcp')">Tweak NVIDIA Control Panel</a>
+            <a href="index.html#amd" onclick="expandAndScrollTo('gpu-drivers-content', 'amd')">Install AMD GPU Drivers</a>
         </div>
         
         <!-- System Section -->
-        <a href="index.html#tempfiles">Windows Cleaning</a>
-        <a href="index.html#faceit">Windows 11 and Faceit AC</a>
-        <a href="index.html#stutter">Fix Game Stutter</a>
+        <a href="index.html#tempfiles" onclick="expandAndScrollTo('windows-cleaning-content', 'tempfiles')">Windows Cleaning</a>
+        <a href="index.html#faceit" onclick="expandAndScrollTo('faceit-ac-content', 'faceit')">Windows 11 and Faceit AC</a>
+        <a href="index.html#stutter" onclick="expandAndScrollTo('stutter-fix-content', 'stutter')">Fix Game Stutter</a>
         
         <!-- BAR Section -->
         <div class="menu-item">Resizable BAR</div>
         <div class="submenu">
-            <a href="index.html#rbar">What is Resizable BAR</a>
-            <a href="index.html#rbarcheck">Check rBAR if Enabled</a>
-            <a href="index.html#rbarbios">Enable rBAR in BIOS</a>
-            <a href="index.html#rbarnv">Enable rBAR for NVIDIA</a>
-            <a href="index.html#rbaramd">Enable rBAR for AMD</a>
+            <a href="index.html#rbar" onclick="expandAndScrollTo('rbar-content', 'rbar')">What is Resizable BAR</a>
+            <a href="index.html#rbarcheck" onclick="expandAndScrollTo('rbar-content', 'rbarcheck')">Check rBAR if Enabled</a>
+            <a href="index.html#rbarbios" onclick="expandAndScrollTo('rbar-content', 'rbarbios')">Enable rBAR in BIOS</a>
+            <a href="index.html#rbarnv" onclick="expandAndScrollTo('rbar-content', 'rbarnv')">Enable rBAR for NVIDIA</a>
+            <a href="index.html#rbaramd" onclick="expandAndScrollTo('rbar-content', 'rbaramd')">Enable rBAR for AMD</a>
         </div>
         
         <!-- CS2 Section -->
         <div class="menu-item">Counter-Strike 2</div>
         <div class="submenu">
-            <a href="index.html#cs2optimize">Counter-Strike 2 Optimizations</a>
-            <a href="index.html#fpscap">FPS Cap</a>
-            <a href="index.html#cs2settings">Counter-Strike 2 Settings</a>
-            <a href="index.html#autoexec">Counter-Strike 2 autoexec file</a>
-            <a href="index.html#benchmarks">Counter-Strike 2 Benchmarks</a>
+            <a href="index.html#cs2optimize" onclick="expandAndScrollTo('cs2-content', 'cs2optimize')">Counter-Strike 2 Optimizations</a>
+            <a href="index.html#fpscap" onclick="expandAndScrollTo('cs2-content', 'fpscap')">FPS Cap</a>
+            <a href="index.html#cs2settings" onclick="expandAndScrollTo('cs2-content', 'cs2settings')">Counter-Strike 2 Settings</a>
+            <a href="index.html#autoexec" onclick="expandAndScrollTo('cs2-content', 'autoexec')">Counter-Strike 2 autoexec file</a>
+            <a href="index.html#benchmarks" onclick="expandAndScrollTo('cs2-content', 'benchmarks')">Counter-Strike 2 Benchmarks</a>
         </div>
         
         <!-- Other -->
@@ -332,6 +332,15 @@
                 buttonText.textContent = 'Expand Menu';
                 button.title = 'Expand all sections';
             }
+        }
+        
+        // Expand section and scroll to element (for navigation from tips page to index page)
+        function expandAndScrollTo(sectionId, elementId) {
+            // Set the section to expanded state in localStorage before navigating
+            localStorage.setItem(`section-${sectionId}`, 'expanded');
+            
+            // Allow the natural link navigation to occur
+            // The index page will handle the actual expansion and scrolling
         }
 
         // Toggle all sections from menu button
